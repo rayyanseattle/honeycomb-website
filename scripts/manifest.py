@@ -243,7 +243,8 @@ PHOTOS += [
     ("HCI/present-media/image5.jpeg", "prod-kantha-animal-cushions", "product", "Kantha-embroidered animal cushions"),
     # ---------- Sohel & family ----------
     ("Sohel/20140302_115006.jpg", "sohel-dye-pots", "people", "Sohel Weldingwala among the dye pots at a printing workshop, 2014"),
-    ("Sohel/20140302_115006 - Copya.jpg", "sohel-portrait", "people", "Sohel Weldingwala"),
+    ("Sohel/107_1237a.JPG", "sohel-portrait", "people", "Sohel Weldingwala at the showroom desk"),
+    ("Sohel/20140302_115006 - Copya.jpg", "sohel-portrait-wall", "people", "Sohel Weldingwala"),
     ("Sohel/20140302_153514.jpg", "sohel-block", "people", "A hand-carved teak printing block"),
     ("Sohel/107_1237.JPG", "sohel-showroom-2007", "people", "At the showroom desk, 2007"),
     ("Sohel/20140302_114947.jpg", "dye-wall", "process", "The dyer's wall"),

@@ -7,7 +7,7 @@ import { photo, byPrefix, caption } from '../lib/photos';
 
 const heroClips = ['/video/hero-hands.mp4', '/video/hero-quilters.mp4', '/video/hero-cutting.mp4'];
 const archiveTeaser = ['arch-kantha-13', 'arch-patola-08', 'arch-applique-01', 'arch-phulkari-05', 'arch-kalamkari-15', 'arch-zardozi-05'];
-const people = ['blockprint-07', 'kutch-embroidery-02', 'blockprint-03', 'dyeing-05', 'kutch-elder', 'washing-04', 'kutch-quilt', 'village-quilting-01'];
+const people = ['kutch-embroidery-01', 'kutch-elder', 'village-quilting-07', 'kutch-women', 'dyeing-05', 'blockprint-03', 'washing-04', 'kutch-quilt'];
 
 // product hover previews
 const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: await getImage({ src: photo(p.photo), width: 720, format: 'webp' }) })));
@@ -48,15 +48,14 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   <!-- ===================== MANIFESTO ===================== -->
   <section class="section manifesto">
     <div class="wrap">
-      <div class="manifesto__grid">
-        <p class="eyebrow" data-reveal><span class="num">§</span>Honeycomb International</p>
-        <p class="manifesto__text display" data-words>
-          A honeycomb is built by thousands of small, patient makers, each adding a cell to something larger than themselves. That is how our cloth has been made since 1969: printed, dyed, stitched and quilted by hand, by families whose craft is older than any brand. After a decade away, we are back at the table.
-        </p>
-        <div class="manifesto__imgs">
-          <Photo slug="quilting-01" ratio="4x5" size="card" parallax class="manifesto__img manifesto__img--a" />
-          <Photo slug="logo-on-cloth" ratio="1x1" size="thumb" parallax class="manifesto__img manifesto__img--b" />
-        </div>
+      <p class="eyebrow manifesto__eyebrow" data-reveal><span class="num">§</span>Honeycomb International</p>
+      <p class="manifesto__text display" data-words>
+        A honeycomb is built by thousands of small, patient makers, each adding a cell to something larger than themselves. That is how our cloth has been made since 1969: printed, dyed, stitched and quilted by hand, by families whose craft is older than any brand. After a decade away, we are back at the table.
+      </p>
+      <div class="manifesto__strip" data-stagger>
+        <Photo slug="blockprint-27" ratio="3x2" size="card" parallax sizes="(max-width: 700px) 100vw, 33vw" />
+        <Photo slug="prod-quilt-2026-indigo" ratio="3x2" size="card" parallax sizes="(max-width: 700px) 100vw, 33vw" />
+        <Photo slug="kutch-women" ratio="3x2" size="card" parallax sizes="(max-width: 700px) 100vw, 33vw" />
       </div>
     </div>
   </section>
@@ -292,7 +291,7 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
       </div>
     </div>
     <div class="cta__img">
-      <Photo slug="blockprint-cloth-02" ratio="21x9" size="wide" parallax />
+      <Photo slug="prod-ajrakh-table-1" ratio="21x9" size="wide" parallax />
     </div>
   </section>
 </Base>
@@ -316,14 +315,12 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   @media (max-width: 900px) { .hero__row { grid-template-columns: 1fr; } .hero__scroll { display: none; } .hero__copy { padding-top: 7rem; } }
 
   /* ---------- manifesto ---------- */
-  .manifesto__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--gutter); align-items: start; }
-  .manifesto__grid .eyebrow { grid-column: 1 / -1; margin-bottom: 2.5rem; }
-  .manifesto__text { font-size: clamp(1.5rem, 1rem + 2.4vw, 3.3rem); line-height: 1.22; letter-spacing: -0.01em; }
+  .manifesto__eyebrow { margin-bottom: 2.5rem; }
+  .manifesto__text { font-size: clamp(1.6rem, 1rem + 2.6vw, 3.6rem); line-height: 1.2; letter-spacing: -0.01em; max-width: 26ch; }
   .manifesto__text :global(.w) { display: inline-block; }
-  .manifesto__imgs { position: relative; padding-top: 2rem; }
-  .manifesto__img--a { width: 78%; margin-left: auto; }
-  .manifesto__img--b { width: 44%; position: absolute; left: 0; bottom: -12%; box-shadow: 0 30px 60px -30px rgba(28, 25, 22, 0.5); }
-  @media (max-width: 900px) { .manifesto__grid { grid-template-columns: 1fr; } .manifesto__imgs { margin-top: 3rem; padding-bottom: 20%; } }
+  .manifesto__strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); margin-top: clamp(3rem, 7vw, 6rem); align-items: start; }
+  .manifesto__strip > :global(*:nth-child(2)) { margin-top: 3rem; }
+  @media (max-width: 700px) { .manifesto__strip { grid-template-columns: 1fr; } .manifesto__strip > :global(*:nth-child(2)) { margin-top: 0; } }
 
   /* ---------- marquee ---------- */
   .marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 1.1rem; white-space: nowrap; }
@@ -333,16 +330,17 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   .marquee__dot { display: inline-block; width: 0.45em; height: 0.45em; border-radius: 50%; background: var(--madder); margin-left: 1.6rem; }
 
   /* ---------- crafts ---------- */
-  .crafts { position: relative; padding-block: var(--section) 0; overflow: hidden; }
-  .crafts__track { display: flex; gap: clamp(2rem, 5vw, 6rem); padding-inline: var(--gutter); align-items: center; width: max-content; }
+  .crafts { position: relative; padding: 0; overflow: hidden; }
+  .crafts__track { display: flex; gap: clamp(2rem, 5vw, 6rem); padding-inline: var(--gutter); align-items: center; width: max-content; min-height: 100vh; padding-bottom: 4rem; box-sizing: border-box; }
   .crafts__intro { width: clamp(20rem, 32vw, 32rem); flex: none; display: flex; flex-direction: column; gap: 1.4rem; }
   .crafts__hint { margin-top: 2rem; letter-spacing: 0.2em; text-transform: uppercase; }
-  .craft { flex: none; width: clamp(20rem, 40vw, 36rem); display: flex; flex-direction: column; gap: 1.3rem; color: inherit; }
+  .craft { flex: none; width: clamp(20rem, 38vw, 34rem); display: flex; flex-direction: column; gap: 1.3rem; color: inherit; }
+  .craft__img :global(.ph) { aspect-ratio: auto; height: min(54vh, 34rem); }
   .craft__img { overflow: hidden; }
   .craft__img :global(.ph) { transition: transform 0.9s var(--ease-out); }
   .craft__img :global(img) { transition: transform 1.2s var(--ease-out); }
   .craft:hover .craft__img :global(img) { transform: scale(1.05); }
-  .craft:nth-child(odd) { margin-top: 5vh; }
+  .craft:nth-child(odd) { margin-top: 3vh; }
   .craft__meta { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1.2rem; align-items: baseline; }
   .craft__num { font-size: var(--t-xs); letter-spacing: 0.2em; color: var(--madder); }
   .craft__name { font-size: clamp(1.6rem, 2.4vw, 2.4rem); }
@@ -359,12 +357,15 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
     .crafts__track { flex-direction: column; width: auto; align-items: stretch; gap: 4rem; }
     .crafts__intro, .crafts__end { width: auto; margin: 0; }
     .craft { width: min(100%, 40rem); margin: 0; }
+    .craft__img :global(.ph) { aspect-ratio: 4 / 5; height: auto; }
+    .crafts__track { min-height: 0; padding-block: var(--section); }
     .crafts__hint, .crafts__progress { display: none; }
   }
 
   /* ---------- process ---------- */
   .process__head { margin-bottom: clamp(3rem, 7vw, 6rem); display: flex; flex-direction: column; gap: 1.4rem; }
-  .process__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--gutter); align-items: start; }
+  .process__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--gutter); align-items: stretch; }
+  .process__stack { position: relative; }
   .process__steps { position: relative; padding-left: 3rem; }
   .process__thread { position: absolute; left: 0.6rem; top: 0; bottom: 0; width: 2px; height: 100%; color: var(--turmeric); }
   .step { padding-block: clamp(3rem, 8vh, 7rem); position: relative; opacity: 0.35; transition: opacity 0.6s; }

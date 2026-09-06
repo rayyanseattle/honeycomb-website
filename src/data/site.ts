@@ -31,7 +31,7 @@ export const crafts = [
     short: 'Block print',
     line: 'Carved teak, mineral colour, and a printer’s steady strike.',
     hero: 'blockprint-05',
-    cover: 'blockprint-07',
+    cover: 'blockprint-2026-dia',
     intro:
       'A wooden block, carved by hand, pressed by hand, one impression at a time. Every metre carries the faint drift of the human hand that made it. That drift is the point.',
     story: [
@@ -50,7 +50,7 @@ export const crafts = [
     short: 'Embroidery',
     line: 'Kantha, zardozi, mirror-work and the running stitch of Bengal.',
     hero: 'frame-stitch-02',
-    cover: 'beadwork-02',
+    cover: 'arch-kantha-13',
     intro:
       'Thread through cloth, a million times over. From the humble running stitch of a kantha quilt to the metal-and-velvet richness of zardozi, embroidery is where our artisans are most themselves.',
     story: [
@@ -69,7 +69,7 @@ export const crafts = [
     short: 'Patchwork',
     line: 'Cut-work, canopies and the pieced quilts of Saurashtra.',
     hero: 'applique-cut-01',
-    cover: 'spiral-02',
+    cover: 'prod-bedcover-applique-1',
     intro:
       'Small pieces of cloth, cut freehand and sewn into something larger than themselves. Appliqué is the great needle art of Gujarat, and Honeycomb has been making it for the world’s homes for more than fifty years.',
     story: [
@@ -107,7 +107,7 @@ export const crafts = [
     short: 'Tie & dye',
     line: 'Bandhani, shibori, leheria and the deep vats of indigo and madder.',
     hero: 'dyeing-01',
-    cover: 'dyeing-03',
+    cover: 'prod-crinkle-blue',
     intro:
       'Cloth is pinched, bound with thread, and plunged into the vat. Where the thread was, the cloth stays pale. Bandhani, the tie-dye of Gujarat and Rajasthan, is that idea repeated ten thousand times.',
     story: [
@@ -166,10 +166,10 @@ export const collections = [
 export const processSteps = [
   { n: '01', title: 'Carve & print', text: 'A pattern is carved in reverse into teak. The printer strikes it onto cloth by eye, repeat after repeat.', photo: 'blockprint-2026-dia' },
   { n: '02', title: 'Wash', text: 'The printed cloth is rinsed in open tanks so that only the fast colour stays.', photo: 'washing-2026' },
-  { n: '03', title: 'Dye', text: 'Indigo and madder in copper cauldrons. Cloth is dipped, aired, and dipped again for depth.', photo: 'dyeing-13' },
-  { n: '04', title: 'Cut & stitch', text: 'Appliqué is cut freehand with iron shears and sewn down with invisible stitches.', photo: 'applique-cut-01' },
-  { n: '05', title: 'Quilt', text: 'Village women layer, tack and hand-quilt each piece, working outdoors in good light.', photo: 'village-quilting-02' },
-  { n: '06', title: 'Finish', text: 'Every piece is checked, pressed, folded by hand and packed for its journey.', photo: 'prod-kantha-quilt-9' },
+  { n: '03', title: 'Dye', text: 'Indigo and madder in copper cauldrons. Cloth is dipped, aired, and dipped again for depth.', photo: 'dyeing-05' },
+  { n: '04', title: 'Cut & stitch', text: 'Appliqué is cut freehand with iron shears and sewn down with invisible stitches.', photo: 'artisan-stitching' },
+  { n: '05', title: 'Quilt', text: 'Village women layer, tack and hand-quilt each piece, working outdoors in good light.', photo: 'village-quilting-07' },
+  { n: '06', title: 'Finish', text: 'Every piece is checked, pressed, folded by hand and packed for its journey.', photo: 'prod-kantha-quilt-1' },
 ];
 
 /** Product categories for the Products page and the home-page list. */
