@@ -1,0 +1,370 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import { getImage } from 'astro:assets';
+import { site, crafts, processSteps, products } from '../data/site';
+import { photo, byPrefix, caption } from '../lib/photos';
+
+const heroClips = ['/video/hero-hands.mp4', '/video/hero-quilters.mp4', '/video/hero-cutting.mp4'];
+const archiveTeaser = ['arch-kantha-13', 'arch-patola-08', 'arch-applique-01', 'arch-kashmir-06', 'arch-mochi-01', 'arch-brocade-02'];
+const people = ['blockprint-07', 'village-quilting-07', 'blockprint-03', 'dyeing-05', 'quilting-03', 'washing-04', 'blockprint-16', 'village-quilting-01'];
+
+// product hover previews
+const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: await getImage({ src: photo(p.photo), width: 720, format: 'webp' }) })));
+---
+<Base preloader navTheme="dark" description={site.description}>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" data-hero>
+    <div class="hero__media" data-hero-media>
+      <video
+        data-hero-video
+        data-clips={heroClips.join(',')}
+        src={heroClips[0]}
+        poster="/video/hero-hands.jpg"
+        autoplay muted playsinline preload="metadata"
+        aria-hidden="true"
+      ></video>
+      <div class="hero__shade"></div>
+    </div>
+    <div class="hero__copy wrap" data-hero-copy>
+      <p class="eyebrow eyebrow--dark hero__eyebrow" data-reveal="fade">{site.city}, India &nbsp;·&nbsp; Since the 1990s</p>
+      <h1 class="lines hero__title">
+        <span class="line"><span>Cloth made</span></span>
+        <span class="line"><span>by <em>many</em> hands.</span></span>
+      </h1>
+      <div class="hero__row">
+        <p class="hero__lede" data-reveal>
+          Hand block print, embroidery, patchwork, weaving and tie‑dye, made with artisan families across Gujarat and Rajasthan for the world’s most considered homes.
+        </p>
+        <div class="hero__cta" data-reveal>
+          <a href="#crafts" class="btn btn--cotton" data-hover>The crafts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
+          <a href="/contact" class="link hero__link" data-hover>Start an enquiry</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll" data-reveal="fade" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ===================== MANIFESTO ===================== -->
+  <section class="section manifesto">
+    <div class="wrap">
+      <div class="manifesto__grid">
+        <p class="eyebrow" data-reveal><span class="num">§</span>Honeycomb International</p>
+        <p class="manifesto__text display" data-words>
+          A honeycomb is built by thousands of small, patient makers, each adding a cell to something larger than themselves. That is how our cloth is made: printed, dyed, stitched and quilted by hand, by families whose craft is older than any brand. After a decade away, we are back at the table.
+        </p>
+        <div class="manifesto__imgs">
+          <Photo slug="quilting-01" ratio="4x5" size="card" parallax class="manifesto__img manifesto__img--a" />
+          <Photo slug="blockprint-cloth-01" ratio="1x1" size="thumb" parallax class="manifesto__img manifesto__img--b" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" data-marquee data-speed="38" aria-hidden="true">
+    <div class="marquee__track" data-marquee-track>
+      {[0, 1].map(() => (
+        <span class="marquee__group">
+          {crafts.map((c) => <span class="marquee__item">{c.name}<i class="marquee__dot"></i></span>)}
+        </span>
+      ))}
+    </div>
+  </div>
+
+  <!-- ===================== CRAFTS ===================== -->
+  <section class="crafts" id="crafts" data-crafts>
+    <div class="crafts__track" data-crafts-track>
+      <div class="crafts__intro">
+        <p class="eyebrow" data-reveal><span class="num">01</span>Five crafts</p>
+        <h2 data-reveal>What the hands<br /><em>still know.</em></h2>
+        <p class="body" data-reveal>Each of our five crafts has its own villages, its own tools and its own tempo. Scroll to meet them.</p>
+        <p class="crafts__hint muted small" data-reveal aria-hidden="true">Scroll →</p>
+      </div>
+      {crafts.map((c, i) => (
+        <a href={`/crafts/${c.slug}`} class="craft" data-cursor-text="Explore" style={`--i:${i}`}>
+          <div class="craft__img" data-craft-img>
+            <Photo slug={c.cover} ratio="4x5" size="card" sizes="(max-width: 900px) 100vw, 44vw" />
+          </div>
+          <div class="craft__meta">
+            <span class="craft__num">{c.n}</span>
+            <h3 class="craft__name">{c.name}</h3>
+            <p class="craft__line">{c.line}</p>
+            <span class="craft__more">Read more</span>
+          </div>
+        </a>
+      ))}
+      <div class="crafts__end">
+        <p class="display crafts__end-text">All five,<br />under <em>one roof.</em></p>
+        <a href="/contact" class="btn btn--ink" data-hover>Work with us</a>
+      </div>
+    </div>
+    <div class="crafts__progress" aria-hidden="true"><span data-crafts-progress></span></div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="section process section--dark" id="process" data-process>
+    <div class="wrap">
+      <div class="process__head">
+        <p class="eyebrow eyebrow--dark" data-reveal><span class="num">02</span>How it is made</p>
+        <h2 data-reveal>From block<br />to <em>bed.</em></h2>
+      </div>
+      <div class="process__grid">
+        <div class="process__steps" data-steps>
+          <svg class="process__thread" viewBox="0 0 2 1000" preserveAspectRatio="none" aria-hidden="true">
+            <path data-thread d="M1 0 V1000" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" />
+          </svg>
+          {processSteps.map((s, i) => (
+            <div class="step" data-step>
+              <span class="step__num">{s.n}</span>
+              <h3 class="step__title">{s.title}</h3>
+              <p class="step__text">{s.text}</p>
+              <div class="step__img-m">
+                <Photo slug={s.photo} ratio="3x2" size="card" />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="process__stack">
+          <div class="process__sticky">
+            {processSteps.map((s, i) => (
+              <div class="process__img" data-step-img style={`--i:${i}`}>
+                <Photo slug={s.photo} ratio="4x5" size="card" sizes="(max-width: 900px) 100vw, 45vw" />
+                <span class="process__cap">{caption(s.photo)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTS ===================== -->
+  <section class="section products" data-products>
+    <div class="wrap">
+      <div class="products__head">
+        <p class="eyebrow" data-reveal><span class="num">03</span>What we make</p>
+        <h2 data-reveal>For the bed, the table,<br />the window and <em>the wall.</em></h2>
+      </div>
+      <ul class="products__list" data-stagger>
+        {products.map((p) => (
+          <li class="product" data-product={p.photo} data-hover>
+            <span class="product__name">{p.name}</span>
+            <span class="product__arrow" aria-hidden="true">→</span>
+          </li>
+        ))}
+      </ul>
+      <p class="body products__note" data-reveal>Everything is made to order, to your design or ours, in the quantities a small brand actually needs. Minimums are modest, sampling is fast, and every piece is finished by hand.</p>
+    </div>
+    <div class="products__preview" data-products-preview aria-hidden="true">
+      {productImgs.map((p) => (
+        <img src={p.img.src} alt="" data-product-img={p.photo} loading="lazy" decoding="async" />
+      ))}
+    </div>
+  </section>
+
+  <!-- ===================== ARCHIVE TEASER ===================== -->
+  <section class="section archive-teaser section--indigo">
+    <div class="wrap">
+      <div class="archive-teaser__head">
+        <div>
+          <p class="eyebrow eyebrow--dark" data-reveal><span class="num">04</span>The archive</p>
+          <h2 data-reveal>A private collection<br />of <em>Indian cloth.</em></h2>
+        </div>
+        <p class="body" data-reveal>Thirty years of collecting kantha, patola, appliqué, Kashmir shawls and bandhani. The archive is where our new work begins, and it is open to clients who want to design from the source.</p>
+      </div>
+      <div class="archive-teaser__grid" data-stagger>
+        {archiveTeaser.map((slug, i) => (
+          <a href="/archive" class="archive-teaser__item" data-cursor-text="Archive" style={`--i:${i}`}>
+            <Photo slug={slug} ratio={i % 3 === 1 ? '4x5' : '1x1'} size="card" parallax />
+            <span class="archive-teaser__cap">{caption(slug)}</span>
+          </a>
+        ))}
+      </div>
+      <div class="tc archive-teaser__cta" data-reveal>
+        <a href="/archive" class="btn btn--cotton" data-hover>Enter the archive <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PEOPLE ===================== -->
+  <section class="section people">
+    <div class="wrap">
+      <div class="people__head">
+        <p class="eyebrow" data-reveal><span class="num">05</span>The hands</p>
+        <h2 data-reveal>Printers, dyers, quilters,<br />cutters and <em>stitchers.</em></h2>
+        <p class="body" data-reveal>We do not own factories. We work with families and workshops who have practised their craft for generations, paying fairly by the piece and returning season after season. Their names do not appear on the label. Their hands appear everywhere else.</p>
+      </div>
+      <div class="people__grid" data-stagger>
+        {people.map((slug, i) => (
+          <figure class="people__item" style={`--i:${i}`}>
+            <Photo slug={slug} ratio={i % 4 === 0 || i % 4 === 3 ? '4x5' : '3x2'} size="card" parallax />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST ===================== -->
+  <section class="section section--tight trust">
+    <div class="wrap">
+      <hr class="stitch" />
+      <div class="trust__grid">
+        <p class="eyebrow" data-reveal>In good company</p>
+        <p class="trust__text display" data-reveal>Our cloth has been sold by <em>Caravane</em> in Paris and by independent homeware houses across Europe and North America. We are now taking on a small number of new partners for 2026.</p>
+      </div>
+      <hr class="stitch" />
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section cta">
+    <div class="wrap cta__inner">
+      <p class="eyebrow" data-reveal><span class="num">06</span>Enquiries</p>
+      <h2 class="cta__title" data-reveal>Let’s make<br />something <em>together.</em></h2>
+      <p class="lede" data-reveal>Send us a sketch, a swatch or a sentence. We will reply within two working days from Ahmedabad.</p>
+      <div class="cta__row" data-reveal>
+        <a href="/contact" class="btn btn--madder" data-hover>Start an enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
+        <a href={`mailto:${site.email}`} class="link" data-hover>{site.email}</a>
+      </div>
+    </div>
+    <div class="cta__img">
+      <Photo slug="blockprint-cloth-02" ratio="21x9" size="wide" parallax />
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---------- hero ---------- */
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: var(--cotton); overflow: hidden; background: var(--ink); }
+  .hero__media { position: absolute; inset: -12% 0 0 0; z-index: 0; }
+  .hero__media video { width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.6s ease; }
+  .hero__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28, 25, 22, 0.35) 0%, rgba(28, 25, 22, 0.05) 35%, rgba(28, 25, 22, 0.72) 100%); }
+  .hero__copy { position: relative; z-index: 1; padding-bottom: clamp(3rem, 8vh, 6rem); padding-top: 9rem; }
+  .hero__eyebrow { margin-bottom: 1.6rem; }
+  .hero__title { font-size: clamp(3.2rem, 1.2rem + 9.2vw, 10.5rem); line-height: 0.96; letter-spacing: -0.02em; }
+  .hero__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem 4rem; align-items: end; margin-top: 2.4rem; }
+  .hero__lede { max-width: 46ch; font-size: var(--t-md); line-height: 1.4; color: rgba(243, 237, 226, 0.85); }
+  .hero__cta { display: flex; align-items: center; gap: 2rem; }
+  .hero__link { font-size: var(--t-sm); letter-spacing: 0.08em; }
+  .hero__scroll { position: absolute; right: var(--gutter); bottom: clamp(3rem, 8vh, 6rem); width: 1px; height: 4rem; background: rgba(243, 237, 226, 0.25); overflow: hidden; z-index: 1; }
+  .hero__scroll span { position: absolute; inset: 0; background: var(--cotton); transform-origin: top; animation: scrollhint 2.2s var(--ease-in-out) infinite; }
+  @keyframes scrollhint { 0% { transform: scaleY(0); transform-origin: top; } 45% { transform: scaleY(1); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+  @media (max-width: 900px) { .hero__row { grid-template-columns: 1fr; } .hero__scroll { display: none; } .hero__copy { padding-top: 7rem; } }
+
+  /* ---------- manifesto ---------- */
+  .manifesto__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--gutter); align-items: start; }
+  .manifesto__grid .eyebrow { grid-column: 1 / -1; margin-bottom: 2.5rem; }
+  .manifesto__text { font-size: clamp(1.5rem, 1rem + 2.4vw, 3.3rem); line-height: 1.22; letter-spacing: -0.01em; }
+  .manifesto__text :global(.w) { display: inline-block; }
+  .manifesto__imgs { position: relative; padding-top: 2rem; }
+  .manifesto__img--a { width: 78%; margin-left: auto; }
+  .manifesto__img--b { width: 44%; position: absolute; left: 0; bottom: -12%; box-shadow: 0 30px 60px -30px rgba(28, 25, 22, 0.5); }
+  @media (max-width: 900px) { .manifesto__grid { grid-template-columns: 1fr; } .manifesto__imgs { margin-top: 3rem; padding-bottom: 20%; } }
+
+  /* ---------- marquee ---------- */
+  .marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 1.1rem; white-space: nowrap; }
+  .marquee__track { display: inline-flex; will-change: transform; }
+  .marquee__group { display: inline-flex; }
+  .marquee__item { display: inline-flex; align-items: center; font-family: var(--font-display); font-size: clamp(1.6rem, 3.6vw, 3.2rem); font-weight: 300; letter-spacing: -0.01em; padding-right: 1.6rem; }
+  .marquee__dot { display: inline-block; width: 0.45em; height: 0.45em; border-radius: 50%; background: var(--madder); margin-left: 1.6rem; }
+
+  /* ---------- crafts ---------- */
+  .crafts { position: relative; padding-block: var(--section) 0; overflow: hidden; }
+  .crafts__track { display: flex; gap: clamp(2rem, 5vw, 6rem); padding-inline: var(--gutter); align-items: center; width: max-content; }
+  .crafts__intro { width: clamp(20rem, 32vw, 32rem); flex: none; display: flex; flex-direction: column; gap: 1.4rem; }
+  .crafts__hint { margin-top: 2rem; letter-spacing: 0.2em; text-transform: uppercase; }
+  .craft { flex: none; width: clamp(20rem, 40vw, 36rem); display: flex; flex-direction: column; gap: 1.3rem; color: inherit; }
+  .craft__img { overflow: hidden; }
+  .craft__img :global(.ph) { transition: transform 0.9s var(--ease-out); }
+  .craft__img :global(img) { transition: transform 1.2s var(--ease-out); }
+  .craft:hover .craft__img :global(img) { transform: scale(1.05); }
+  .craft:nth-child(odd) { margin-top: 5vh; }
+  .craft__meta { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1.2rem; align-items: baseline; }
+  .craft__num { font-size: var(--t-xs); letter-spacing: 0.2em; color: var(--madder); }
+  .craft__name { font-size: clamp(1.6rem, 2.4vw, 2.4rem); }
+  .craft__line { grid-column: 2; color: var(--ink-2); max-width: 36ch; }
+  .craft__more { grid-column: 2; font-size: var(--t-xs); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.4rem; position: relative; display: inline-block; width: fit-content; }
+  .craft__more::after { content: ''; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; background: currentColor; transform: scaleX(0.35); transform-origin: left; transition: transform 0.5s var(--ease-out); }
+  .craft:hover .craft__more::after { transform: scaleX(1); }
+  .crafts__end { flex: none; width: clamp(20rem, 34vw, 32rem); display: flex; flex-direction: column; gap: 2rem; padding-right: var(--gutter); }
+  .crafts__end-text { font-size: var(--t-xl); }
+  .crafts__progress { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 2rem; height: 1px; background: var(--line); }
+  .crafts__progress span { display: block; height: 100%; background: var(--ink); transform: scaleX(0); transform-origin: left; }
+  @media (max-width: 900px), (prefers-reduced-motion: reduce) {
+    .crafts { padding-bottom: var(--section); }
+    .crafts__track { flex-direction: column; width: auto; align-items: stretch; gap: 4rem; }
+    .crafts__intro, .crafts__end { width: auto; margin: 0; }
+    .craft { width: min(100%, 40rem); margin: 0; }
+    .crafts__hint, .crafts__progress { display: none; }
+  }
+
+  /* ---------- process ---------- */
+  .process__head { margin-bottom: clamp(3rem, 7vw, 6rem); display: flex; flex-direction: column; gap: 1.4rem; }
+  .process__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--gutter); align-items: start; }
+  .process__steps { position: relative; padding-left: 3rem; }
+  .process__thread { position: absolute; left: 0.6rem; top: 0; bottom: 0; width: 2px; height: 100%; color: var(--turmeric); }
+  .step { padding-block: clamp(3rem, 8vh, 7rem); position: relative; opacity: 0.35; transition: opacity 0.6s; }
+  .step.is-active { opacity: 1; }
+  .step::before { content: ''; position: absolute; left: -3rem; top: calc(clamp(3rem, 8vh, 7rem) + 0.55em); width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 1px solid var(--turmeric); background: var(--ink); transform: translateX(0); transition: background 0.5s; }
+  .step.is-active::before { background: var(--turmeric); }
+  .step__num { font-size: var(--t-xs); letter-spacing: 0.2em; color: var(--turmeric); }
+  .step__title { margin-top: 0.6rem; font-size: clamp(1.8rem, 3.2vw, 3.2rem); }
+  .step__text { margin-top: 1rem; max-width: 36ch; color: rgba(243, 237, 226, 0.72); }
+  .step__img-m { display: none; margin-top: 1.5rem; }
+  .process__sticky { position: sticky; top: 12vh; height: 76vh; }
+  .process__img { position: absolute; inset: 0; opacity: 0; transform: scale(0.96); transition: opacity 0.8s var(--ease-out), transform 1s var(--ease-out); }
+  .process__img.is-active { opacity: 1; transform: none; z-index: 1; }
+  .process__img :global(.ph) { height: 100%; aspect-ratio: auto; }
+  .process__cap { position: absolute; left: 1.2rem; bottom: 1rem; font-size: var(--t-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--cotton); opacity: 0.85; text-shadow: 0 1px 12px rgba(0,0,0,0.6); }
+  @media (max-width: 900px) {
+    .process__grid { grid-template-columns: 1fr; }
+    .process__stack { display: none; }
+    .step { opacity: 1; padding-block: 2.5rem; }
+    .step__img-m { display: block; }
+  }
+
+  /* ---------- products ---------- */
+  .products { position: relative; overflow: hidden; }
+  .products__head { display: flex; flex-direction: column; gap: 1.4rem; margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+  .products__list { border-top: 1px solid var(--line); }
+  .product { display: flex; justify-content: space-between; align-items: center; padding: clamp(1rem, 2.4vw, 1.8rem) 0; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-size: clamp(1.7rem, 1rem + 3.2vw, 4rem); font-weight: 300; letter-spacing: -0.01em; transition: padding-left 0.5s var(--ease-out), color 0.4s; cursor: default; }
+  .product:hover { padding-left: 1.2rem; color: var(--madder); }
+  .product__arrow { font-family: var(--font-body); font-size: 1.2rem; opacity: 0; transform: translateX(-8px); transition: opacity 0.4s, transform 0.5s var(--ease-out); }
+  .product:hover .product__arrow { opacity: 1; transform: none; }
+  .products__note { margin-top: 2.5rem; }
+  .products__preview { position: absolute; left: 0; top: 0; width: clamp(14rem, 22vw, 22rem); aspect-ratio: 4 / 5; pointer-events: none; z-index: 2; opacity: 0; transition: opacity 0.4s; overflow: hidden; }
+  .products__preview.is-visible { opacity: 1; }
+  .products__preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s; }
+  .products__preview img.is-active { opacity: 1; }
+
+  /* ---------- archive teaser ---------- */
+  .archive-teaser__head { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
+  .archive-teaser__head h2 { margin-top: 1.4rem; }
+  .archive-teaser__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); align-items: start; }
+  .archive-teaser__item { display: block; color: inherit; }
+  .archive-teaser__item:nth-child(3n+2) { margin-top: 4rem; }
+  .archive-teaser__item :global(img) { transition: transform 1.2s var(--ease-out); }
+  .archive-teaser__item:hover :global(img) { transform: scale(1.05); }
+  .archive-teaser__cap { display: block; margin-top: 0.8rem; font-size: var(--t-xs); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; }
+  .archive-teaser__cta { margin-top: clamp(3rem, 7vw, 6rem); }
+  @media (max-width: 900px) { .archive-teaser__head { grid-template-columns: 1fr; } .archive-teaser__grid { grid-template-columns: 1fr 1fr; } .archive-teaser__item:nth-child(3n+2) { margin-top: 0; } .archive-teaser__item:nth-child(even) { margin-top: 3rem; } }
+
+  /* ---------- people ---------- */
+  .people__head { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem var(--gutter); margin-bottom: clamp(3rem, 7vw, 6rem); align-items: end; }
+  .people__head .eyebrow { grid-column: 1 / -1; }
+  .people__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gutter); align-items: start; }
+  .people__item:nth-child(4n+2), .people__item:nth-child(4n+3) { margin-top: 3rem; }
+  @media (max-width: 900px) { .people__head { grid-template-columns: 1fr; } .people__grid { grid-template-columns: 1fr 1fr; } .people__item { margin-top: 0 !important; } .people__item:nth-child(even) { margin-top: 2.5rem !important; } }
+
+  /* ---------- trust ---------- */
+  .trust__grid { display: grid; grid-template-columns: 1fr 3fr; gap: var(--gutter); padding-block: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .trust__text { font-size: clamp(1.4rem, 0.9rem + 2vw, 2.6rem); line-height: 1.25; }
+  @media (max-width: 900px) { .trust__grid { grid-template-columns: 1fr; } }
+
+  /* ---------- cta ---------- */
+  .cta { padding-bottom: 0; }
+  .cta__inner { display: flex; flex-direction: column; gap: 1.6rem; align-items: flex-start; margin-bottom: clamp(3rem, 8vw, 7rem); }
+  .cta__title { font-size: var(--t-2xl); }
+  .cta__row { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+</style>

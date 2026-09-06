@@ -1,0 +1,62 @@
+---
+import Logo from './Logo.astro';
+import { site, crafts } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="footer section--indigo">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <Logo />
+        <p class="footer__line">Hand block print, embroidery, patchwork, weaving and tie‑dye. Made in Gujarat and Rajasthan, for homes everywhere.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <p class="eyebrow eyebrow--dark">Crafts</p>
+          <ul>
+            {crafts.map((c) => <li><a class="link" href={`/crafts/${c.slug}`} data-hover>{c.name}</a></li>)}
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--dark">Honeycomb</p>
+          <ul>
+            <li><a class="link" href="/about" data-hover>Our story</a></li>
+            <li><a class="link" href="/archive" data-hover>Textile archive</a></li>
+            <li><a class="link" href="/#process" data-hover>How we work</a></li>
+            <li><a class="link" href="/contact" data-hover>Enquiries</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--dark">Write to us</p>
+          <ul>
+            <li><a class="link" href={`mailto:${site.email}`} data-hover>{site.email}</a></li>
+            <li class="muted">{site.city}, {site.region}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="stitch footer__stitch" />
+    <div class="footer__bottom">
+      <span class="small muted">© {year} {site.name}. All rights reserved.</span>
+      <span class="small muted">Est. {site.founded} · Ahmedabad</span>
+    </div>
+  </div>
+  <div class="footer__big" aria-hidden="true"><span>Honeycomb</span></div>
+</footer>
+
+<style>
+  .footer { padding-top: var(--section); padding-bottom: 0; overflow: hidden; position: relative; }
+  .footer__top { display: grid; grid-template-columns: 1.2fr 2fr; gap: var(--gutter); }
+  .footer__brand { display: flex; flex-direction: column; gap: 1.4rem; }
+  .footer__line { max-width: 34ch; color: rgba(243, 237, 226, 0.7); font-size: var(--t-sm); line-height: 1.6; }
+  .footer__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+  .footer__cols ul { margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-size: var(--t-sm); }
+  .footer__stitch { margin-top: 4rem; }
+  .footer__bottom { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.4rem 0; flex-wrap: wrap; }
+  .footer__big { font-family: var(--font-display); font-weight: 300; font-size: clamp(6rem, 22vw, 26rem); line-height: 0.78; text-align: center; color: rgba(243, 237, 226, 0.07); letter-spacing: -0.03em; margin-top: 1rem; pointer-events: none; user-select: none; font-variation-settings: 'opsz' 144, 'SOFT' 100; }
+  .footer__big span { display: block; transform: translateY(18%); }
+  @media (max-width: 900px) {
+    .footer__top { grid-template-columns: 1fr; gap: 3rem; }
+    .footer__cols { grid-template-columns: 1fr 1fr; }
+  }
+</style>

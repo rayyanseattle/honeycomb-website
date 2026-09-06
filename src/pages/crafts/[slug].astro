@@ -1,0 +1,135 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { getImage } from 'astro:assets';
+import { crafts, site } from '../../data/site';
+import { photo, caption } from '../../lib/photos';
+
+export function getStaticPaths() {
+  return crafts.map((c) => ({ params: { slug: c.slug }, props: { craft: c } }));
+}
+const { craft } = Astro.props;
+const idx = crafts.findIndex((c) => c.slug === craft.slug);
+const next = crafts[(idx + 1) % crafts.length];
+const prev = crafts[(idx - 1 + crafts.length) % crafts.length];
+
+const fulls = await Promise.all([...craft.process, ...craft.gallery].map(async (s) => [s, (await getImage({ src: photo(s), width: 1800, format: 'webp' })).src] as const));
+const fullOf = Object.fromEntries(fulls);
+---
+<Base title={craft.name} description={craft.intro} navTheme="dark">
+  <section class="chero" data-hero>
+    <div class="chero__media" data-hero-media>
+      <Photo slug={craft.hero} ratio="auto" size="hero" loading="eager" class="chero__ph" />
+      <div class="chero__shade"></div>
+    </div>
+    <div class="wrap chero__copy" data-hero-copy>
+      <p class="eyebrow eyebrow--dark" data-reveal="fade"><span class="num">{craft.n}</span>Craft {idx + 1} of {crafts.length}</p>
+      <h1 class="lines chero__title">
+        {craft.name.split(' ').map((w) => <span class="line"><span>{w}</span></span>)}
+      </h1>
+      <p class="chero__line" data-reveal>{craft.line}</p>
+    </div>
+  </section>
+
+  <section class="section cintro">
+    <div class="wrap cintro__grid">
+      <p class="cintro__text display" data-words>{craft.intro}</p>
+      <div class="cintro__body body">
+        {craft.story.map((p) => <p data-reveal>{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark cprocess">
+    <div class="wrap">
+      <div class="cprocess__head">
+        <p class="eyebrow eyebrow--dark" data-reveal>In the workshop</p>
+        <h2 data-reveal>The <em>making</em> of it.</h2>
+      </div>
+      <div class="cprocess__grid" data-stagger>
+        {craft.process.map((slug, i) => (
+          <a href={fullOf[slug]} class="cprocess__item" data-lightbox-item data-full={fullOf[slug]} data-caption={caption(slug)} data-cursor-text="View" style={`--i:${i}`}>
+            <Photo slug={slug} ratio={i % 3 === 0 ? '4x5' : '3x2'} size="card" sizes="(max-width: 700px) 100vw, 33vw" />
+            <span class="cprocess__cap">{caption(slug)}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section cprod">
+    <div class="wrap cprod__grid">
+      <div>
+        <p class="eyebrow" data-reveal>What we make with it</p>
+        <ul class="cprod__list" data-stagger>
+          {craft.products.map((p) => <li class="cprod__item">{p}</li>)}
+        </ul>
+        <p class="body cprod__note" data-reveal>Made to order, to your design or ours. Ask for a sample.</p>
+        <a href="/contact" class="btn btn--ink" data-reveal data-hover>Enquire about {craft.short.toLowerCase()} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="cprod__imgs" data-stagger>
+        {craft.gallery.map((slug, i) => (
+          <a href={fullOf[slug]} class="cprod__img" data-lightbox-item data-full={fullOf[slug]} data-caption={caption(slug)} data-cursor-text="View" style={`--i:${i}`}>
+            <Photo slug={slug} ratio={i % 2 === 0 ? '4x5' : '1x1'} size="card" parallax />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <nav class="cnav" aria-label="Other crafts">
+    <a href={`/crafts/${prev.slug}`} class="cnav__link" data-hover>
+      <span class="eyebrow">← Previous</span>
+      <span class="cnav__name">{prev.name}</span>
+    </a>
+    <a href={`/crafts/${next.slug}`} class="cnav__link cnav__link--next" data-hover>
+      <span class="eyebrow">Next →</span>
+      <span class="cnav__name">{next.name}</span>
+    </a>
+  </nav>
+
+  <Lightbox />
+</Base>
+
+<style>
+  .chero { position: relative; min-height: 88svh; display: flex; align-items: flex-end; color: var(--cotton); overflow: hidden; background: var(--ink); }
+  .chero__media { position: absolute; inset: -10% 0 0 0; }
+  .chero__media :global(.chero__ph) { height: 100%; }
+  .chero__media :global(.chero__ph img) { height: 100%; }
+  .chero__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28, 25, 22, 0.35) 0%, rgba(28, 25, 22, 0.05) 40%, rgba(28, 25, 22, 0.75) 100%); }
+  .chero__copy { position: relative; z-index: 1; padding: 9rem 0 clamp(3rem, 7vh, 5rem); display: flex; flex-direction: column; gap: 1.4rem; }
+  .chero__title { font-size: clamp(3rem, 1rem + 8.5vw, 9.5rem); line-height: 0.96; }
+  .chero__title .line { display: inline-block; margin-right: 0.22em; }
+  .chero__line { font-size: var(--t-md); max-width: 40ch; color: rgba(243, 237, 226, 0.85); }
+
+  .cintro__grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--gutter); align-items: start; }
+  .cintro__text { font-size: clamp(1.5rem, 1rem + 2.2vw, 3rem); line-height: 1.22; }
+  .cintro__text :global(.w) { display: inline-block; }
+  .cintro__body { padding-top: 0.6rem; }
+  @media (max-width: 900px) { .cintro__grid { grid-template-columns: 1fr; } }
+
+  .cprocess__head { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: clamp(3rem, 6vw, 5rem); }
+  .cprocess__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); align-items: start; }
+  .cprocess__item { display: block; color: inherit; }
+  .cprocess__item:nth-child(3n+2) { margin-top: 3rem; }
+  .cprocess__item :global(img) { transition: transform 1.2s var(--ease-out); }
+  .cprocess__item:hover :global(img) { transform: scale(1.04); }
+  .cprocess__cap { display: block; margin-top: 0.7rem; font-size: var(--t-xs); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; }
+  @media (max-width: 700px) { .cprocess__grid { grid-template-columns: 1fr 1fr; } .cprocess__item:nth-child(3n+2) { margin-top: 0; } .cprocess__item:nth-child(even) { margin-top: 2rem; } }
+
+  .cprod__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--gutter); align-items: start; }
+  .cprod__list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .cprod__item { padding: 1rem 0; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-size: clamp(1.4rem, 2.4vw, 2.2rem); font-weight: 300; }
+  .cprod__note { margin-block: 2rem 1.6rem; }
+  .cprod__imgs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: start; }
+  .cprod__img { display: block; }
+  .cprod__img:nth-child(even) { margin-top: 4rem; }
+  @media (max-width: 900px) { .cprod__grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+  .cnav { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+  .cnav__link { padding: clamp(2rem, 5vw, 4rem) var(--gutter); display: flex; flex-direction: column; gap: 0.6rem; transition: background 0.5s; }
+  .cnav__link:hover { background: var(--cotton-2); }
+  .cnav__link--next { text-align: right; align-items: flex-end; border-left: 1px solid var(--line); }
+  .cnav__name { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.8rem); font-weight: 300; }
+</style>

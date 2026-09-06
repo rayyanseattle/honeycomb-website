@@ -1,0 +1,18 @@
+<div class="cursor" data-cursor aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"><span class="cursor__label" data-cursor-label></span></div>
+</div>
+
+<style>
+  .cursor { position: fixed; left: 0; top: 0; z-index: 200; pointer-events: none; display: none; mix-blend-mode: difference; color: #fff; }
+  body.has-cursor .cursor { display: block; }
+  .cursor__dot { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: currentColor; transform: translate(-50%, -50%); }
+  .cursor__ring { position: absolute; width: 40px; height: 40px; border-radius: 50%; border: 1px solid currentColor; transform: translate(-50%, -50%) scale(1); transition: transform 0.45s var(--ease-out), background 0.45s var(--ease-out), opacity 0.3s; display: grid; place-items: center; }
+  .cursor__label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0; transition: opacity 0.3s; white-space: nowrap; }
+  .cursor.is-hover .cursor__ring { transform: translate(-50%, -50%) scale(1.6); background: rgba(255, 255, 255, 0.15); }
+  .cursor.is-hover .cursor__dot { opacity: 0; }
+  .cursor.is-label .cursor__ring { transform: translate(-50%, -50%) scale(2.4); background: rgba(255, 255, 255, 0.95); mix-blend-mode: normal; }
+  .cursor.is-label .cursor__label { opacity: 1; color: #1c1916; }
+  .cursor.is-label .cursor__dot { opacity: 0; }
+  .cursor.is-down .cursor__ring { transform: translate(-50%, -50%) scale(0.8); }
+</style>

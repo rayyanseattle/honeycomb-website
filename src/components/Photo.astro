@@ -1,0 +1,58 @@
+---
+/**
+ * Responsive, art-directed photograph from the restored archive.
+ * `size` controls the widths generated at build time.
+ */
+import { Picture } from 'astro:assets';
+import { photo, caption as captionOf } from '../lib/photos';
+
+interface Props {
+  slug: string;
+  alt?: string;
+  size?: 'thumb' | 'card' | 'wide' | 'hero';
+  ratio?: '3x2' | '4x5' | '1x1' | '16x9' | '21x9' | 'auto';
+  parallax?: boolean;
+  loading?: 'lazy' | 'eager';
+  class?: string;
+  sizes?: string;
+  position?: string;
+}
+
+const { slug, alt, size = 'card', ratio = '3x2', parallax = false, loading = 'lazy', class: cls = '', sizes, position } = Astro.props;
+
+const widthsFor = {
+  thumb: [400, 800],
+  card: [640, 1100, 1600],
+  wide: [900, 1400, 2000],
+  hero: [1000, 1600, 2200],
+} as const;
+
+const sizesFor = {
+  thumb: '(max-width: 700px) 50vw, 25vw',
+  card: '(max-width: 700px) 100vw, 50vw',
+  wide: '(max-width: 700px) 100vw, 80vw',
+  hero: '100vw',
+} as const;
+
+const img = photo(slug);
+const maxW = Math.min(widthsFor[size][widthsFor[size].length - 1], img.width);
+const fallbackH = Math.round((maxW * img.height) / img.width);
+const altText = alt ?? captionOf(slug);
+const ratioClass = ratio === 'auto' ? '' : `ph--${ratio}`;
+---
+
+<div class:list={['ph', ratioClass, cls]} data-parallax={parallax ? '' : undefined}>
+  <Picture
+    src={img}
+    widths={[...widthsFor[size]]}
+    sizes={sizes ?? sizesFor[size]}
+    formats={['avif']}
+    fallbackFormat="webp"
+    width={maxW}
+    height={fallbackH}
+    alt={altText}
+    loading={loading}
+    decoding="async"
+    style={position ? `object-position:${position}` : undefined}
+  />
+</div>

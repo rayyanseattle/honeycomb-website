@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import { site, crafts } from '../data/site';
+const formAction = `https://formsubmit.co/${site.email}`;
+---
+<Base title="Enquiries" description={`Start an enquiry with ${site.name}. Bespoke hand block print, embroidery, patchwork, weaving and tie-dye home textiles, made to order in Ahmedabad.`}>
+  <section class="khero" data-hero>
+    <div class="wrap khero__grid">
+      <div class="khero__copy">
+        <p class="eyebrow" data-reveal="fade">Enquiries</p>
+        <h1 class="lines khero__title">
+          <span class="line"><span>Send us a sketch,</span></span>
+          <span class="line"><span>a swatch, or</span></span>
+          <span class="line"><span>a <em>sentence.</em></span></span>
+        </h1>
+        <p class="lede" data-reveal>We reply to every enquiry within two working days from Ahmedabad. If it is easier, write to us directly at <a href={`mailto:${site.email}`} class="link" data-hover>{site.email}</a>.</p>
+
+        <dl class="khero__facts" data-reveal>
+          <div><dt class="eyebrow">Email</dt><dd><a href={`mailto:${site.email}`} class="link" data-hover>{site.email}</a></dd></div>
+          <div><dt class="eyebrow">Studio</dt><dd>{site.city}, {site.region}</dd></div>
+          <div><dt class="eyebrow">Hours</dt><dd>Mon to Sat, 10:00 to 18:00 IST</dd></div>
+        </dl>
+      </div>
+
+      <form class="form" action={formAction} method="POST" data-reveal>
+        <input type="hidden" name="_subject" value="New enquiry from honeycombint.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value={`${site.url}/thanks`} />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="form__row">
+          <label class="field"><span>Your name</span><input type="text" name="name" required autocomplete="name" /></label>
+          <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email" /></label>
+        </div>
+        <div class="form__row">
+          <label class="field"><span>Company or studio</span><input type="text" name="company" autocomplete="organization" /></label>
+          <label class="field"><span>Country</span><input type="text" name="country" autocomplete="country-name" /></label>
+        </div>
+        <fieldset class="field field--set">
+          <legend><span>I’m interested in</span></legend>
+          <div class="chips">
+            {crafts.map((c) => (
+              <label class="chip"><input type="checkbox" name="interest[]" value={c.name} /><span>{c.short}</span></label>
+            ))}
+            <label class="chip"><input type="checkbox" name="interest[]" value="Archive visit" /><span>Archive visit</span></label>
+          </div>
+        </fieldset>
+        <label class="field"><span>Tell us about the project</span><textarea name="message" rows="6" required placeholder="Products, quantities, timelines, references, anything at all."></textarea></label>
+        <button type="submit" class="btn btn--madder form__submit" data-hover>Send enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></button>
+        <p class="small muted form__note">By sending, you agree that we may reply to you by email. We never share your details.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap kimgs" data-stagger>
+      <Photo slug="beadwork-02" ratio="3x2" size="card" parallax />
+      <Photo slug="blockprint-12" ratio="3x2" size="card" parallax />
+      <Photo slug="village-quilting-04" ratio="3x2" size="card" parallax />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .khero { padding-top: 10rem; padding-bottom: var(--section); }
+  .khero__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(3rem, 6vw, 7rem); align-items: start; }
+  .khero__copy { display: flex; flex-direction: column; gap: 1.6rem; position: sticky; top: 7rem; }
+  .khero__title { font-size: var(--t-xl); }
+  .khero__facts { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, auto); gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  .khero__facts dd { margin: 0.5rem 0 0; font-size: var(--t-sm); }
+  @media (max-width: 900px) { .khero__grid { grid-template-columns: 1fr; } .khero__copy { position: static; } .khero__facts { grid-template-columns: 1fr; } }
+
+  .form { display: flex; flex-direction: column; gap: 1.6rem; padding-top: 0.6rem; }
+  .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+  .field { display: flex; flex-direction: column; gap: 0.5rem; border: 0; padding: 0; margin: 0; min-width: 0; }
+  .field > span, .field legend span { font-size: var(--t-xs); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+  .field input, .field textarea { font: inherit; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid var(--ink-3); padding: 0.7rem 0; border-radius: 0; outline: none; transition: border-color 0.3s; }
+  .field input:focus, .field textarea:focus { border-color: var(--ink); }
+  .field textarea { resize: vertical; line-height: 1.5; }
+  .field--set legend { padding: 0; margin-bottom: 0.7rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip span { display: inline-block; padding: 0.5em 1em; border: 1px solid var(--line); border-radius: 999px; font-size: var(--t-sm); transition: background 0.3s, color 0.3s, border-color 0.3s; cursor: pointer; }
+  .chip input:checked + span { background: var(--ink); color: var(--cotton); border-color: var(--ink); }
+  .chip input:focus-visible + span { outline: 2px solid var(--madder); outline-offset: 2px; }
+  .form__submit { align-self: flex-start; margin-top: 0.5rem; }
+  .form__note { max-width: 44ch; }
+  @media (max-width: 600px) { .form__row { grid-template-columns: 1fr; } }
+
+  .kimgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+  @media (max-width: 700px) { .kimgs { grid-template-columns: 1fr; } }
+</style>

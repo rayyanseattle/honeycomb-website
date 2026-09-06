@@ -1,0 +1,28 @@
+<div class="loader" data-loader aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__hex" viewBox="0 0 40 40">
+      <path d="M20 3 L34.7 11.5 L34.7 28.5 L20 37 L5.3 28.5 L5.3 11.5 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" stroke-linecap="round" pathLength="100" />
+    </svg>
+    <div class="loader__word">
+      {'Honeycomb'.split('').map((ch, i) => <span style={`--i:${i}`}>{ch}</span>)}
+    </div>
+    <span class="loader__sub">Ahmedabad · Since the 1990s</span>
+  </div>
+  <hr class="loader__thread" />
+</div>
+
+<style>
+  .loader { position: fixed; inset: 0; z-index: 100; background: var(--indigo); color: var(--cotton); display: grid; place-items: center; }
+  .loader__inner { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+  .loader__hex { width: 3rem; height: 3rem; stroke-dashoffset: 100; animation: draw 1.4s var(--ease-in-out) forwards; }
+  .loader__word { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1; letter-spacing: -0.02em; display: flex; overflow: hidden; }
+  .loader__word span { display: inline-block; transform: translateY(110%); animation: rise 1s var(--ease-out) forwards; animation-delay: calc(0.15s + var(--i) * 0.04s); }
+  .loader__sub { font-size: var(--t-xs); letter-spacing: 0.3em; text-transform: uppercase; opacity: 0; animation: fade 0.8s 0.7s forwards; }
+  .loader__thread { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; margin: 0; border: 0; background: var(--turmeric); transform-origin: left; transform: scaleX(0); animation: thread 1.5s var(--ease-in-out) forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes rise { to { transform: none; } }
+  @keyframes fade { to { opacity: 0.7; } }
+  @keyframes thread { to { transform: scaleX(1); } }
+  .loader.is-done { transition: transform 0.9s var(--ease-in-out); transform: translateY(-100%); }
+  .loader.is-skipped { display: none; }
+</style>

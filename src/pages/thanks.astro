@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import { site } from '../data/site';
+---
+<Base title="Thank you" description="Your enquiry has been received.">
+  <section class="thanks" data-hero>
+    <div class="wrap thanks__grid">
+      <div class="thanks__copy">
+        <p class="eyebrow" data-reveal="fade">Received</p>
+        <h1 class="lines"><span class="line"><span>Thank you.</span></span><span class="line"><span>We’ll <em>write back.</em></span></span></h1>
+        <p class="lede" data-reveal>Your enquiry is on its way to Ahmedabad. Expect a reply within two working days from <a class="link" href={`mailto:${site.email}`}>{site.email}</a>.</p>
+        <a href="/" class="btn btn--ink" data-reveal data-hover>Back to the beginning</a>
+      </div>
+      <Photo slug="quilting-03" ratio="4x5" size="card" parallax class="thanks__img" />
+    </div>
+  </section>
+</Base>
+<style>
+  .thanks { padding: 10rem 0 var(--section); }
+  .thanks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: center; }
+  .thanks__copy { display: flex; flex-direction: column; gap: 1.6rem; align-items: flex-start; }
+  @media (max-width: 800px) { .thanks__grid { grid-template-columns: 1fr; } }
+</style>

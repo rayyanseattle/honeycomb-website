@@ -1,0 +1,93 @@
+---
+import Logo from './Logo.astro';
+import { site } from '../data/site';
+interface Props { theme?: 'light' | 'dark' }
+const { theme = 'light' } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class:list={['nav', `nav--${theme}`]} data-nav>
+  <div class="nav__inner wrap">
+    <Logo />
+    <nav class="nav__links" aria-label="Primary">
+      {site.nav.map((item) => (
+        <a href={item.href} class:list={['nav__link', { 'is-active': path === item.href.replace(/#.*$/, '') && !item.href.includes('#') }]} data-hover>
+          <span>{item.label}</span>
+        </a>
+      ))}
+    </nav>
+    <a href="/contact" class="nav__cta btn btn--ink" data-hover>Start an enquiry</a>
+    <button class="nav__burger" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Open menu" data-hover>
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" data-menu aria-hidden="true">
+  <div class="menu__bg"></div>
+  <div class="menu__inner wrap">
+    <ul class="menu__list">
+      {site.nav.map((item, i) => (
+        <li style={`--i:${i}`}><a href={item.href} class="menu__link" data-menu-link><span class="menu__num">0{i + 1}</span><span class="menu__label">{item.label}</span></a></li>
+      ))}
+    </ul>
+    <div class="menu__foot">
+      <a href={`mailto:${site.email}`} class="link">{site.email}</a>
+      <span class="muted">{site.city}, {site.region}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 60;
+    padding-block: 1.1rem;
+    transition: transform 0.6s var(--ease-out), background 0.5s, color 0.5s, padding 0.5s;
+    color: var(--ink);
+  }
+  .nav--dark { color: var(--cotton); }
+  .nav.is-hidden { transform: translateY(-110%); }
+  .nav.is-scrolled {
+    padding-block: 0.7rem;
+    background: color-mix(in srgb, var(--cotton) 82%, transparent);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    color: var(--ink);
+  }
+  .nav.is-scrolled .nav__cta { color: var(--ink); }
+  .nav.is-menu-open { background: transparent; backdrop-filter: none; color: var(--cotton); }
+  .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+  .nav__links { display: flex; gap: 2.2rem; margin-left: auto; }
+  .nav__link { font-size: var(--t-sm); letter-spacing: 0.06em; position: relative; padding: 0.4rem 0; overflow: hidden; }
+  .nav__link span { display: inline-block; transition: transform 0.5s var(--ease-out); }
+  .nav__link::after { content: ''; position: absolute; left: 0; bottom: 0.2rem; height: 1px; width: 100%; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 0.5s var(--ease-out); }
+  .nav__link:hover::after, .nav__link.is-active::after { transform: scaleX(1); transform-origin: left; }
+  .nav__cta { padding: 0.8em 1.3em; }
+  .nav--dark .nav__cta { color: var(--cotton); }
+  .nav--dark .nav__cta:hover { color: var(--ink); }
+  .nav--dark .nav__cta:hover::before { background: var(--cotton); }
+  .nav.is-scrolled.nav--dark .nav__cta:hover { color: var(--cotton); }
+  .nav.is-scrolled.nav--dark .nav__cta:hover::before { background: var(--ink); }
+  .nav__burger { display: none; width: 2.6rem; height: 2.6rem; position: relative; }
+  .nav__burger span { position: absolute; left: 0.55rem; right: 0.55rem; height: 1.5px; background: currentColor; transition: transform 0.5s var(--ease-out), top 0.5s var(--ease-out); }
+  .nav__burger span:first-child { top: 1.05rem; }
+  .nav__burger span:last-child { top: 1.5rem; }
+  .nav__burger[aria-expanded="true"] span:first-child { top: 1.28rem; transform: rotate(45deg); }
+  .nav__burger[aria-expanded="true"] span:last-child { top: 1.28rem; transform: rotate(-45deg); }
+
+  .menu { position: fixed; inset: 0; z-index: 55; pointer-events: none; visibility: hidden; color: var(--cotton); }
+  .menu.is-open { pointer-events: auto; visibility: visible; }
+  .menu__bg { position: absolute; inset: 0; background: var(--indigo); transform: translateY(-100%); transition: transform 0.8s var(--ease-in-out); }
+  .menu.is-open .menu__bg { transform: none; }
+  .menu__inner { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; padding-top: 5rem; }
+  .menu__list li { overflow: hidden; }
+  .menu__link { display: flex; align-items: baseline; gap: 1.2rem; font-family: var(--font-display); font-size: clamp(2.4rem, 8vw, 5rem); font-weight: 300; line-height: 1.15; transform: translateY(110%); transition: transform 0.9s var(--ease-out); transition-delay: calc(0.08s + var(--i) * 0.06s); }
+  .menu.is-open .menu__link { transform: none; }
+  .menu__num { font-family: var(--font-body); font-size: var(--t-xs); letter-spacing: 0.2em; opacity: 0.5; }
+  .menu__foot { margin-top: 3rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: var(--t-sm); opacity: 0; transition: opacity 0.6s 0.5s; }
+  .menu.is-open .menu__foot { opacity: 1; }
+
+  @media (max-width: 900px) {
+    .nav__links, .nav__cta { display: none; }
+    .nav__burger { display: block; margin-left: auto; }
+  }
+</style>

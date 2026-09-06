@@ -1,0 +1,37 @@
+<div class="lb" data-lightbox aria-hidden="true" role="dialog" aria-label="Image viewer">
+  <button class="lb__close" data-lightbox-close aria-label="Close" data-hover>
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lb__nav lb__nav--prev" data-lightbox-prev aria-label="Previous" data-hover>
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <figure class="lb__fig">
+    <img src="" alt="" />
+    <figcaption>
+      <span data-lightbox-caption></span>
+      <span class="lb__count" data-lightbox-count></span>
+    </figcaption>
+  </figure>
+  <button class="lb__nav lb__nav--next" data-lightbox-next aria-label="Next" data-hover>
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<style>
+  .lb { position: fixed; inset: 0; z-index: 90; background: rgba(28, 25, 22, 0.96); color: var(--cotton); display: grid; place-items: center; opacity: 0; visibility: hidden; transition: opacity 0.5s var(--ease-out), visibility 0s 0.5s; padding: 4rem var(--gutter); }
+  .lb.is-open { opacity: 1; visibility: visible; transition: opacity 0.5s var(--ease-out); }
+  .lb__fig { max-width: min(100%, 1400px); max-height: 100%; display: flex; flex-direction: column; gap: 1rem; align-items: center; transform: scale(0.97); transition: transform 0.6s var(--ease-out); }
+  .lb.is-open .lb__fig { transform: none; }
+  .lb__fig img { max-height: calc(100vh - 10rem); max-width: 100%; width: auto; height: auto; object-fit: contain; }
+  .lb__fig figcaption { display: flex; gap: 2rem; font-size: var(--t-sm); opacity: 0.75; }
+  .lb__count { letter-spacing: 0.15em; }
+  .lb__close { position: absolute; top: 1.4rem; right: 1.4rem; width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(243, 237, 226, 0.25); }
+  .lb__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 3.4rem; height: 3.4rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(243, 237, 226, 0.25); transition: background 0.3s; }
+  .lb__nav:hover { background: rgba(243, 237, 226, 0.12); }
+  .lb__nav--prev { left: 1.4rem; }
+  .lb__nav--next { right: 1.4rem; }
+  @media (max-width: 700px) {
+    .lb { padding: 3rem 0.5rem; }
+    .lb__nav { top: auto; bottom: 0.8rem; transform: none; width: 2.8rem; height: 2.8rem; }
+  }
+</style>

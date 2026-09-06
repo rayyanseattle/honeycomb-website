@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://honeycombint.com/sitemap-index.xml

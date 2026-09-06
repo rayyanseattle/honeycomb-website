@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page not found" description="That page has come loose.">
+  <section class="nf" data-hero>
+    <div class="wrap nf__inner">
+      <p class="eyebrow" data-reveal="fade">404</p>
+      <h1 class="lines"><span class="line"><span>A loose</span></span><span class="line"><span><em>thread.</em></span></span></h1>
+      <p class="lede" data-reveal>That page has come unstitched. Try the beginning.</p>
+      <a href="/" class="btn btn--ink" data-reveal data-hover>Home</a>
+    </div>
+  </section>
+</Base>
+<style>
+  .nf { min-height: 80svh; display: flex; align-items: center; padding-top: 6rem; }
+  .nf__inner { display: flex; flex-direction: column; gap: 1.6rem; align-items: flex-start; }
+</style>
