@@ -51,6 +51,16 @@ python3 scripts/process_images.py \
 
 Each photo is white-balanced, contrast-corrected, downscaled to 1000px, restored and upscaled 4x by Real-ESRGAN, then resized to 2400px. Astro generates AVIF/WebP responsive variants at build time.
 
+## Visual QA
+
+```sh
+npm run build && npx astro preview            # then, in another shell:
+node scripts/shot.mjs <outdir> "/,/products"  # full-page screenshots, desktop + mobile
+node scripts/shot-scroll.mjs <outdir> /        # frame-by-frame scroll capture (honours pinned sections)
+```
+
+Both use the locally installed Google Chrome via puppeteer-core.
+
 ## Contact form
 
 The form posts to [FormSubmit](https://formsubmit.co) at `info@honeycombint.com`. The first submission triggers an activation email to that inbox; click the link once and all later submissions are delivered. Replace with Formspree, Netlify Forms or a serverless function later if preferred.

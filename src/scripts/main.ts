@@ -374,6 +374,9 @@ if (filters) {
       ScrollTrigger.refresh();
     });
   });
+  // deep link: /products#quilts
+  const hashKey = location.hash.replace('#', '');
+  if (hashKey) filters.querySelector<HTMLButtonElement>(`button[data-filter="${hashKey}"]`)?.click();
 }
 
 /* ------------------------------------------------------------------ */

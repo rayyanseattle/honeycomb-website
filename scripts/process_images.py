@@ -40,8 +40,18 @@ def enhance(im: Image.Image, wb_strength=0.3) -> Image.Image:
     return im
 
 
-def process(src_path: Path, out_path: Path, esrgan: str, long_edge=2400, pre=1000):
-    im = enhance(Image.open(src_path))
+def process(src_path: Path, out_path: Path, esrgan: str, long_edge=2400, pre=1000, opts=None):
+    opts = opts or {}
+    im = enhance(Image.open(src_path), wb_strength=opts.get("wb", 0.3))
+    if "crop" in opts:  # fractions of width/height to keep: (left, top, right, bottom)
+        l, t, r, b = opts["crop"]
+        im = im.crop((int(im.width * l), int(im.height * t), int(im.width * r), int(im.height * b)))
+    if opts.get("rotate"):
+        im = im.rotate(opts["rotate"], expand=True)
+    if opts.get("ai") is False:  # large, already-sharp originals: plain resize
+        im.thumbnail((long_edge, long_edge), Image.LANCZOS)
+        im.save(out_path, "JPEG", quality=88, optimize=True, progressive=True)
+        return im.size
     im.thumbnail((pre, pre), Image.LANCZOS)
     with tempfile.TemporaryDirectory() as td:
         small = Path(td) / "in.png"
@@ -69,7 +79,9 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DATA.parent.mkdir(parents=True, exist_ok=True)
     records = []
-    for rel, slug, group, caption in PHOTOS:
+    for entry in PHOTOS:
+        rel, slug, group, caption = entry[:4]
+        opts = entry[4] if len(entry) > 4 else {}
         if args.only and slug != args.only:
             continue
         src = Path(args.src) / rel
@@ -81,7 +93,7 @@ def main():
             w, h = Image.open(out).size
         else:
             print(f"-> {slug}", flush=True)
-            w, h = process(src, out, args.esrgan)
+            w, h = process(src, out, args.esrgan, opts=opts)
         records.append({"slug": slug, "group": group, "caption": caption, "width": w, "height": h, "source": rel})
     if not args.only:
         DATA.write_text(json.dumps(records, indent=2, ensure_ascii=False))

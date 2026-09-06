@@ -12,6 +12,9 @@
   --ink-3: #8a7f72;
   --indigo: #1d2a44;
   --indigo-2: #2b3d63;
+  --forest: #0f2a19;   /* the green of the Honeycomb mark and brochure */
+  --forest-2: #1c3d26;
+  --forest-3: #3f6b48;
   --madder: #a2392a;
   --madder-2: #c4503d;
   --turmeric: #c9973a;
@@ -75,7 +78,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 ul, ol { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, h4, p, figure { margin: 0; }
 
-::selection { background: var(--madder); color: var(--cotton); }
+::selection { background: var(--forest); color: var(--cotton); }
 
 /* --- typography ------------------------------------------------- */
 .display, h1, h2, h3 {
@@ -114,12 +117,13 @@ em, .it { font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100, '
 .section--tight { padding-block: calc(var(--section) * 0.6); }
 .section--dark { background: var(--ink); color: var(--cotton); }
 .section--indigo { background: var(--indigo); color: var(--cotton); }
-.section--dark .body, .section--indigo .body, .section--dark .lede, .section--indigo .lede { color: rgba(243, 237, 226, 0.78); }
-.section--dark .muted, .section--indigo .muted { color: rgba(243, 237, 226, 0.5); }
+.section--forest { background: var(--forest); color: var(--cotton); }
+.section--dark .body, .section--indigo .body, .section--forest .body, .section--dark .lede, .section--indigo .lede, .section--forest .lede { color: rgba(243, 237, 226, 0.78); }
+.section--dark .muted, .section--indigo .muted, .section--forest .muted { color: rgba(243, 237, 226, 0.5); }
 
 .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
 .rule { border: 0; border-top: 1px solid var(--line); margin: 0; }
-.section--dark .rule, .section--indigo .rule { border-color: rgba(243, 237, 226, 0.15); }
+.section--dark .rule, .section--indigo .rule, .section--forest .rule { border-color: rgba(243, 237, 226, 0.15); }
 
 /* --- links & buttons ------------------------------------------- */
 .link {

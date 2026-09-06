@@ -3,12 +3,12 @@ import Logo from './Logo.astro';
 import { site, crafts } from '../data/site';
 const year = new Date().getFullYear();
 ---
-<footer class="footer section--indigo">
+<footer class="footer section--forest">
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
         <Logo />
-        <p class="footer__line">Hand block print, embroidery, patchwork, weaving and tie‑dye. Made in Gujarat and Rajasthan, for homes everywhere.</p>
+        <p class="footer__line">Manufacturers and exporters of handcrafted merchandise since 1969. Hand block print, embroidery, appliqué, weaving and tie‑dye, made in Gujarat and Rajasthan for homes everywhere.</p>
       </div>
       <div class="footer__cols">
         <div>
@@ -21,6 +21,7 @@ const year = new Date().getFullYear();
           <p class="eyebrow eyebrow--dark">Honeycomb</p>
           <ul>
             <li><a class="link" href="/about" data-hover>Our story</a></li>
+            <li><a class="link" href="/products" data-hover>Products</a></li>
             <li><a class="link" href="/archive" data-hover>Textile archive</a></li>
             <li><a class="link" href="/#process" data-hover>How we work</a></li>
             <li><a class="link" href="/contact" data-hover>Enquiries</a></li>
@@ -30,7 +31,7 @@ const year = new Date().getFullYear();
           <p class="eyebrow eyebrow--dark">Write to us</p>
           <ul>
             <li><a class="link" href={`mailto:${site.email}`} data-hover>{site.email}</a></li>
-            <li class="muted">{site.city}, {site.region}</li>
+            <li class="muted">{site.address}</li>
           </ul>
         </div>
       </div>

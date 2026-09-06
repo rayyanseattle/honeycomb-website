@@ -12,14 +12,14 @@ const fulls = new Map(await Promise.all(all.map(async (it) => [it.slug, (await g
 const count = all.length;
 ---
 <Base title="Textile Archive" description="A private collection of antique Indian textiles: kantha, patola, appliqué, Kashmir shawls, bandhani, mochi embroidery, kalamkari and brocade." navTheme="dark">
-  <section class="ahero section--indigo" data-hero>
+  <section class="ahero section--forest" data-hero>
     <div class="wrap ahero__inner">
       <p class="eyebrow eyebrow--dark" data-reveal="fade">The archive &nbsp;·&nbsp; {count} pieces</p>
       <h1 class="lines ahero__title">
         <span class="line"><span>Old cloth,</span></span>
         <span class="line"><span>new <em>ideas.</em></span></span>
       </h1>
-      <p class="lede ahero__lede" data-reveal>Over thirty years we have gathered a private collection of Indian textiles: nakshi kantha from Bengal, double‑ikat patola from Patan, appliqué canopies from Saurashtra, Kashmir shawls, bandhani, mochi embroidery, kalamkari and Banarasi brocade. It is a working library. Clients are welcome to design from it.</p>
+      <p class="lede ahero__lede" data-reveal>Since 1969 two generations have gathered a private collection of Indian textiles: nakshi kantha from Bengal, double‑ikat patola from Patan, appliqué canopies and embroidered friezes from Saurashtra, phulkari from Punjab, Kashmir shawls, bandhani, mochi and mirror-work, kalamkari, zardozi on velvet and Banarasi brocade. It is a working library. Clients are welcome to design from it.</p>
     </div>
   </section>
 
@@ -56,7 +56,7 @@ const count = all.length;
       <hr class="stitch" />
       <div class="anote__grid">
         <p class="eyebrow">A note on the archive</p>
-        <p class="body">Pieces are photographed as they are: worn, folded, occasionally mended. Most date from the early to mid twentieth century; a few are older. The archive is not for sale, but it is open by appointment in Ahmedabad and available to clients as a design reference for new work.</p>
+        <p class="body">Pieces are photographed as they are: worn, folded, occasionally mended. Most date from the late nineteenth to mid twentieth century. Honeycomb has always dealt in museum-quality Indian textiles alongside its own production; ask us about any piece. The archive is open by appointment in Ahmedabad and available to clients as a design reference for new work.</p>
       </div>
       <hr class="stitch" />
     </div>
@@ -75,7 +75,7 @@ const count = all.length;
   .afilter { font-size: var(--t-sm); letter-spacing: 0.04em; padding: 0.55em 1em; border: 1px solid var(--line); border-radius: 999px; transition: background 0.4s, color 0.4s, border-color 0.4s; }
   .afilter sup { font-size: 0.65em; opacity: 0.6; margin-left: 0.2em; }
   .afilter:hover { border-color: var(--ink); }
-  .afilter.is-active { background: var(--ink); color: var(--cotton); border-color: var(--ink); }
+  .afilter.is-active { background: var(--forest); color: var(--cotton); border-color: var(--forest); }
   .agrid { columns: 4; column-gap: var(--gutter); }
   .aitem { display: block; break-inside: avoid; margin-bottom: var(--gutter); color: inherit; }
   .aitem[hidden] { display: none; }

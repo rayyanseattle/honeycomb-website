@@ -4,56 +4,68 @@ import Photo from '../components/Photo.astro';
 import { site } from '../data/site';
 
 const timeline = [
-  { year: '1990s', title: 'A table in Ahmedabad', text: 'Sohel Weldingwala founds Honeycomb International as a small export house for hand-printed and hand-embroidered home textiles, working directly with artisan families in Gujarat and Rajasthan.' },
-  { year: '1998', title: 'The first catalogue', text: 'Block-printed bed linen, appliqué wall hangings, bandhani scarves and cotton dhurries are photographed for our first printed catalogue and website.' },
-  { year: '2000s', title: 'Paris, and beyond', text: 'Honeycomb cloth reaches the shelves of Caravane in Paris and independent homeware houses across Europe and North America.' },
-  { year: '2012', title: 'The workshops on film', text: 'We document our printers, dyers, cutters and village quilters at work: the photographs and film that appear across this site.' },
-  { year: '2010s', title: 'A pause', text: 'The business is set down for a decade. The relationships, the archive and the knowledge are kept.' },
-  { year: '2026', title: 'Back at the table', text: 'Honeycomb International returns, with the same families, the same crafts, and a new generation helping to tell the story.' },
+  { year: '1956', title: 'A first trip to Kutch', text: 'Nazir Weldingwala, ‘Nazirbhai’ to everyone who knew him, travels to the then-unexplored villages of Kutch and is captivated by their embroidery, appliqué and printed cloth. He begins taking curious foreign visitors to the region.' },
+  { year: '1969', title: 'Honeycomb International is founded', text: 'What began as a benevolent act in tourism becomes a full-scale enterprise for promoting the arts, crafts and handicrafts of Gujarat. The horse-and-rider mark, borrowed from the appliqué tradition, becomes the company’s signature.' },
+  { year: '1990s', title: 'Sohel joins', text: 'Nazir’s son Sohel takes the business into design and product development, adapting traditional techniques to the tastes of international retailers and interior houses.' },
+  { year: '1998', title: 'The first website and catalogue', text: 'Block-printed bed linen, appliqué wall hangings, bandhani scarves and cotton dhurries are photographed for our first printed catalogue and website.' },
+  { year: '2000s', title: 'Paris, Madrid, San Francisco', text: 'Honeycomb develops and supplies collections for Caravane in Paris, Zara Home and Cost Plus World Market, among others, working with more than 3,000 artisans.' },
+  { year: '2012', title: 'Inspirations from Nature', text: 'A brochure and film document the range and the workshops: four collections named for a peacock, a full moon, a snowflake and freshly hewn wood.' },
+  { year: '2014', title: 'A pause', text: 'The business is set down for a decade. The relationships, the archive and the knowledge are kept.' },
+  { year: '2026', title: 'Back at the table', text: 'Honeycomb International returns, led by Sohel, with the same families, the same crafts, and a new generation helping to tell the story.' },
 ];
 
 const values = [
   { title: 'Made by hand, on purpose', text: 'We choose the slow way because it produces cloth that machines cannot: irregular, alive, and unmistakably human.' },
-  { title: 'Families, not factories', text: 'We work with independent workshops and village groups, pay by the piece, and come back every season.' },
+  { title: 'Families, not factories', text: 'We source and allocate work to independent artisans and village groups, women and men, pay by the piece, and come back every season.' },
   { title: 'Designed from the source', text: 'Our archive of antique Indian textiles is the starting point for new work, not a museum.' },
-  { title: 'Small runs, real minimums', text: 'We are built for considered brands and interior studios, not for volume. Sampling is fast and honest.' },
+  { title: 'Personal and collaborative', text: 'From the first sketch through sampling, production, quality control and shipment, one conversation, with the same people.' },
 ];
 ---
-<Base title="Our Story" description={`The story of ${site.name}: founded in Ahmedabad in the 1990s by ${site.founder}, paused for a decade, and now back at the table.`}>
+<Base title="Our Story" description={`The story of ${site.name}: founded in Ahmedabad in 1969 by ${site.founder}, led today by ${site.md}, paused for a decade, and now back at the table.`}>
   <section class="shero" data-hero>
     <div class="wrap shero__inner">
       <p class="eyebrow" data-reveal="fade">Our story</p>
       <h1 class="lines shero__title">
-        <span class="line"><span>Thirty years,</span></span>
+        <span class="line"><span>Two generations,</span></span>
         <span class="line"><span>one <em>thread.</em></span></span>
       </h1>
       <div class="shero__row">
-        <p class="lede" data-reveal>Honeycomb International was founded in Ahmedabad in the 1990s by {site.founder}, a textile exporter with a collector’s eye and a stubborn belief that handmade cloth belongs in the best homes in the world.</p>
+        <p class="lede" data-reveal>Honeycomb International was founded in Ahmedabad in 1969 by {site.founder}, a man who fell for the cloth of Kutch and spent his life taking it to the world. His son {site.md} leads it today, with the same conviction that handmade cloth belongs in the best homes on earth.</p>
       </div>
     </div>
     <div class="shero__imgs">
       <Photo slug="cat-process-embroidery" ratio="4x5" size="card" parallax class="shero__img shero__img--a" />
-      <Photo slug="blockprint-06" ratio="3x2" size="wide" parallax class="shero__img shero__img--b" />
-      <Photo slug="cat-process-drying" ratio="4x5" size="card" parallax class="shero__img shero__img--c" />
+      <Photo slug="showroom-hero" ratio="3x2" size="wide" parallax class="shero__img shero__img--b" />
+      <Photo slug="kutch-quilt" ratio="4x5" size="card" parallax class="shero__img shero__img--c" />
     </div>
   </section>
 
   <section class="section story">
     <div class="wrap story__grid">
       <div class="story__aside">
-        <p class="eyebrow" data-reveal>The founder</p>
-        <p class="story__name display" data-reveal>{site.founder}</p>
-        <p class="small muted" data-reveal>Managing Director, Honeycomb International</p>
+        <Photo slug="sohel-portrait" ratio="4x5" size="card" class="story__portrait" />
+        <p class="story__name display">{site.md}</p>
+        <p class="small muted">Managing Director</p>
+        <p class="small muted">Son of {site.founder}, founder</p>
       </div>
       <div class="body story__body">
-        <p data-reveal>Ahmedabad has been a textile city for five hundred years. It sits between the block printers of Rajasthan to the north, the embroiderers and weavers of Kutch to the west, and the mills that made it the Manchester of India. Honeycomb began here, at a single table, with a simple idea: find the best hands in the region, design with them rather than for them, and take the result to the world.</p>
-        <p data-reveal>Through the late 1990s and 2000s, that meant block-printed bed linen for French boutiques, appliqué wall hangings for American catalogues, cotton dhurries, bandhani scarves and hand-quilted throws. It meant long days in printing sheds and dye yards, and long evenings in village courtyards watching quilts come together. Along the way it also meant collecting: kantha, patola, Kashmir shawls, pieces bought not to sell but to learn from.</p>
-        <p data-reveal>Then, for a decade, the business was set down. The families kept working. The archive kept its folds. And in 2026, with a new generation at hand to help, Honeycomb International is back at the table, with the same crafts, the same people, and the same conviction that the slow way is the right way.</p>
+        <p class="eyebrow" data-reveal>Showcasing craftsmanship since 1969</p>
+        <p data-reveal>Ahmedabad has been a textile city for five hundred years. It sits between the block printers of Rajasthan to the north, the embroiderers and weavers of Kutch to the west, and the mills that once made it the Manchester of India. In 1956, a young Nazir Weldingwala made his first trip into the villages of Kutch and came back with an obsession. He began guiding foreign visitors there, and in 1969 that obsession became a company: a place to find the best hands in the region, design with them rather than for them, and take the result to the world.</p>
+        <p data-reveal>Under Nazirbhai, and then under his son Sohel, Honeycomb grew into a design, product development, manufacturing and export house working with more than three thousand artisans, women and men, across Gujarat and Rajasthan. Through the 1990s and 2000s that meant block-printed bed linen for Caravane in Paris, tie-dyed quilts for Zara Home, appliqué and cushions for Cost Plus World Market, cotton dhurries, bandhani scarves and hand-quilted throws. It meant long days in printing sheds and dye yards, and long evenings in village courtyards watching quilts come together.</p>
+        <p data-reveal>Along the way it also meant collecting: kantha, patola, phulkari, kalamkari, Kashmir shawls, zardozi on velvet, pieces bought not to sell but to learn from. Honeycomb encouraged many upcoming artisans and national award winners, and worked to keep the skills of their craft alive.</p>
+        <p data-reveal>Then, for a decade, the business was set down. The families kept working. The archive kept its folds. And in 2026, with a new generation at hand to help, Honeycomb International is back at the table at Cama Hotel, Khanpur, with the same crafts, the same people, and the same conviction that the slow way is the right way.</p>
       </div>
     </div>
   </section>
 
-  <section class="section section--dark timeline">
+  <section class="section section--tight sohel">
+    <div class="wrap">
+      <Photo slug="sohel-dye-pots" ratio="21x9" size="wide" parallax />
+      <p class="small muted sohel__cap" data-reveal>Sohel Weldingwala among the dye pots of a printing workshop, 2014.</p>
+    </div>
+  </section>
+
+  <section class="section section--forest timeline">
     <div class="wrap">
       <p class="eyebrow eyebrow--dark" data-reveal>Timeline</p>
       <ol class="timeline__list">
@@ -88,19 +100,37 @@ const values = [
     </div>
   </section>
 
+  <section class="section section--tight showroom2">
+    <div class="wrap">
+      <div class="showroom2__head">
+        <p class="eyebrow" data-reveal>The showroom</p>
+        <h2 data-reveal>Where the <em>buying</em> happens.</h2>
+        <p class="body" data-reveal>Buyers have been sitting down at Cama Hotel, Khanpur, with tea and a wall of folded quilts for decades. The showroom is open again by appointment.</p>
+      </div>
+      <div class="showroom2__grid" data-stagger>
+        <Photo slug="showroom-01" ratio="3x2" size="card" parallax />
+        <Photo slug="visitors-01" ratio="3x2" size="card" parallax />
+        <Photo slug="showroom-03" ratio="3x2" size="card" parallax />
+        <Photo slug="visitors-04" ratio="3x2" size="card" parallax />
+        <Photo slug="showroom-05" ratio="3x2" size="card" parallax />
+        <Photo slug="brochure-cover" ratio="3x2" size="card" parallax />
+      </div>
+    </div>
+  </section>
+
   <section class="section section--tight collage">
     <div class="wrap collage__grid" data-stagger>
-      <Photo slug="village-quilting-02" ratio="3x2" size="card" parallax />
-      <Photo slug="dyeing-08" ratio="4x5" size="card" parallax />
-      <Photo slug="village-hut" ratio="4x5" size="card" parallax />
-      <Photo slug="washing-07" ratio="3x2" size="card" parallax />
+      <Photo slug="kutch-embroidery-01" ratio="3x2" size="card" parallax />
+      <Photo slug="kutch-elder" ratio="4x5" size="card" parallax />
+      <Photo slug="kutch-bhunga-01" ratio="4x5" size="card" parallax />
+      <Photo slug="kutch-women" ratio="3x2" size="card" parallax />
     </div>
   </section>
 
   <section class="section cta2">
     <div class="wrap cta2__inner">
       <h2 data-reveal>Come and see<br />for <em>yourself.</em></h2>
-      <p class="lede" data-reveal>We welcome clients to Ahmedabad to visit the workshops and the archive. Or start with a conversation.</p>
+      <p class="lede" data-reveal>We welcome clients to Ahmedabad to visit the workshops, the showroom and the archive. Or start with a conversation.</p>
       <div class="cta2__row" data-reveal>
         <a href="/contact" class="btn btn--madder" data-hover>Start an enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
         <a href="/archive" class="link" data-hover>Browse the archive</a>
@@ -113,16 +143,20 @@ const values = [
   .shero { padding-top: 10rem; overflow: hidden; }
   .shero__inner { display: flex; flex-direction: column; gap: 1.6rem; }
   .shero__title { font-size: var(--t-2xl); }
-  .shero__row { max-width: 60ch; }
+  .shero__row { max-width: 62ch; }
   .shero__imgs { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: var(--gutter); align-items: end; margin-top: clamp(3rem, 7vw, 6rem); padding-inline: var(--gutter); }
   .shero__img--a { margin-bottom: 8%; }
   .shero__img--c { margin-bottom: 16%; }
   @media (max-width: 700px) { .shero__imgs { grid-template-columns: 1fr 1fr; } .shero__img--b { grid-column: 1 / -1; } .shero__img--a, .shero__img--c { margin: 0; } }
 
   .story__grid { display: grid; grid-template-columns: 1fr 2fr; gap: var(--gutter); align-items: start; }
-  .story__aside { position: sticky; top: 7rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .story__aside { position: sticky; top: 7rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .story__portrait { margin-bottom: 1rem; max-width: 22rem; }
   .story__name { font-size: var(--t-lg); }
+  .story__body .eyebrow { margin-bottom: 1.4rem; }
   @media (max-width: 900px) { .story__grid { grid-template-columns: 1fr; } .story__aside { position: static; } }
+
+  .sohel__cap { margin-top: 0.8rem; }
 
   .timeline__list { margin-top: 3rem; border-top: 1px solid rgba(243, 237, 226, 0.15); }
   .tl { display: grid; grid-template-columns: 10rem 1fr; gap: var(--gutter); padding: clamp(1.6rem, 3.5vw, 2.6rem) 0; border-bottom: 1px solid rgba(243, 237, 226, 0.15); }
@@ -138,6 +172,10 @@ const values = [
   .value__title { font-size: var(--t-md); font-family: var(--font-display); font-weight: 400; line-height: 1.2; }
   .value__text { color: var(--ink-2); font-size: var(--t-sm); line-height: 1.6; }
   @media (max-width: 900px) { .values__grid { grid-template-columns: 1fr 1fr; } }
+
+  .showroom2__head { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 60ch; }
+  .showroom2__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+  @media (max-width: 700px) { .showroom2__grid { grid-template-columns: 1fr 1fr; } }
 
   .collage__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: var(--gutter); align-items: end; }
   @media (max-width: 900px) { .collage__grid { grid-template-columns: 1fr 1fr; } }

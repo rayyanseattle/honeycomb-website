@@ -1,25 +1,31 @@
 ---
-interface Props { class?: string; dark?: boolean; compact?: boolean }
-const { class: cls = '', compact = false } = Astro.props;
+/**
+ * The Honeycomb International mark: a horse-and-rider appliqué motif and a
+ * hand-lettered wordmark, traced from the original 2012 print files.
+ */
+import logo from '../assets/brand/logo.json';
+interface Props { class?: string; compact?: boolean; stacked?: boolean; markOnly?: boolean }
+const { class: cls = '', compact = false, stacked = false, markOnly = false } = Astro.props;
+const { mark, word } = logo as Record<string, { w: number; h: number; transform: string; d: string }>;
 ---
-<a href="/" class:list={['logo', cls, { 'logo--compact': compact }]} aria-label="Honeycomb International, home">
-  <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
-    <!-- a hexagon drawn as a running stitch -->
-    <path d="M20 3 L34.7 11.5 L34.7 28.5 L20 37 L5.3 28.5 L5.3 11.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3" stroke-linecap="round" pathLength="100" />
-    <path d="M20 12 L27 16 L27 24 L20 28 L13 24 L13 16 Z" fill="currentColor" opacity=".92" />
+<a href="/" class:list={['logo', cls, { 'logo--compact': compact, 'logo--stacked': stacked, 'logo--mark-only': markOnly }]} aria-label="Honeycomb International, home">
+  <svg class="logo__mark" viewBox={`0 0 ${mark.w} ${mark.h}`} aria-hidden="true">
+    <g transform={mark.transform} fill="currentColor"><path d={mark.d} /></g>
   </svg>
-  <span class="logo__word">
-    <span class="logo__name">Honeycomb</span>
-    <span class="logo__sub">International</span>
-  </span>
+  {!markOnly && (
+    <svg class="logo__word" viewBox={`0 0 ${word.w} ${word.h}`} role="img" aria-label="Honeycomb International">
+      <g transform={word.transform} fill="currentColor"><path d={word.d} /></g>
+    </svg>
+  )}
 </a>
 
 <style>
-  .logo { display: inline-flex; align-items: center; gap: 0.7rem; color: inherit; }
-  .logo__mark { width: 2.1rem; height: 2.1rem; flex: none; }
-  .logo__word { display: flex; flex-direction: column; line-height: 1; }
-  .logo__name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; letter-spacing: -0.01em; font-variation-settings: 'opsz' 48, 'SOFT' 40; }
-  .logo__sub { font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase; opacity: 0.7; margin-top: 0.28rem; padding-left: 0.05em; }
+  .logo { display: inline-flex; align-items: center; gap: 0.75rem; color: inherit; }
+  .logo__mark { height: 2.4rem; width: auto; flex: none; }
+  .logo__word { height: 0.78rem; width: auto; display: block; }
   .logo--compact .logo__word { display: none; }
-  @media (max-width: 640px) { .logo__name { font-size: 1.2rem; } }
+  .logo--stacked { flex-direction: column; align-items: center; gap: 0.9rem; }
+  .logo--stacked .logo__mark { height: 5rem; }
+  .logo--stacked .logo__word { height: 1rem; }
+  @media (max-width: 640px) { .logo__mark { height: 2rem; } .logo__word { height: 0.62rem; } }
 </style>

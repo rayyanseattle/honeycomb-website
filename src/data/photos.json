@@ -653,7 +653,7 @@
     "caption": "Block printing, as photographed for our first catalogue",
     "width": 1303,
     "height": 2400,
-    "source": "HCI/website/mfgprocess-of-blockprint.jpg"
+    "source": "Workshop_Sample Development/Artisan working/Copy of mfgprocess-of-blockprint.jpg"
   },
   {
     "slug": "cat-process-drying",
@@ -669,7 +669,7 @@
     "caption": "Embroidery and tie-dye in progress",
     "width": 1589,
     "height": 2400,
-    "source": "HCI/website/mfgprocess-of-emb(1st&secondleftonly).jpg"
+    "source": "Workshop_Sample Development/Artisan working/Copy of mfgprocess-of-emb(1st&secondleftonly).jpg"
   },
   {
     "slug": "cat-process-embroidery",
@@ -677,7 +677,7 @@
     "caption": "Two embroiderers at work",
     "width": 1658,
     "height": 2400,
-    "source": "HCI/website/mfgprocess-of-embrodary.jpg"
+    "source": "Workshop_Sample Development/Artisan working/Copy of mfgprocess-of-embrodary.jpg"
   },
   {
     "slug": "cat-process-weaving",
@@ -685,7 +685,7 @@
     "caption": "Weaving a dhurrie on the ground loom",
     "width": 2400,
     "height": 2153,
-    "source": "HCI/website/mfgprocess-of-weaving(kharal).jpg"
+    "source": "Workshop_Sample Development/Artisan working/Copy of mfgprocess-of-weaving(kharal).jpg"
   },
   {
     "slug": "cat-patchwork-cushions",
@@ -1494,5 +1494,2341 @@
     "width": 2400,
     "height": 1800,
     "source": "Collection Old Textiles_Jewellery/TEXTILE/ekat & KE shawl/DSC04104.JPG"
+  },
+  {
+    "slug": "showroom-hero",
+    "group": "place",
+    "caption": "The Honeycomb showroom at Cama Hotel, Khanpur, Ahmedabad",
+    "width": 2400,
+    "height": 1311,
+    "source": "HCI/honeycomb-1.jpg"
+  },
+  {
+    "slug": "showroom-01",
+    "group": "place",
+    "caption": "Quilts and cushions on the showroom shelves",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/IMG_0190.JPG"
+  },
+  {
+    "slug": "showroom-02",
+    "group": "place",
+    "caption": "The showroom",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/IMG_0192.JPG"
+  },
+  {
+    "slug": "showroom-03",
+    "group": "place",
+    "caption": "Folded quilts, stacked by colour",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/IMG_0195.JPG"
+  },
+  {
+    "slug": "showroom-04",
+    "group": "place",
+    "caption": "The showroom at Khanpur",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/IMG_0198.JPG"
+  },
+  {
+    "slug": "showroom-05",
+    "group": "place",
+    "caption": "Bedcovers and throws on display",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/IMG_0201.JPG"
+  },
+  {
+    "slug": "showroom-06",
+    "group": "place",
+    "caption": "Inside the showroom",
+    "width": 1800,
+    "height": 2400,
+    "source": "HCI/IMG_0204.JPG"
+  },
+  {
+    "slug": "showroom-07",
+    "group": "place",
+    "caption": "Cushions in the showroom",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/IMG_0206.JPG"
+  },
+  {
+    "slug": "logo-on-cloth",
+    "group": "place",
+    "caption": "The Honeycomb rider, embroidered on green cloth",
+    "width": 2400,
+    "height": 1421,
+    "source": "HCI/DSC00712.jpg"
+  },
+  {
+    "slug": "brochure-cover",
+    "group": "place",
+    "caption": "Our 2012 brochure, Inspirations from Nature",
+    "width": 1320,
+    "height": 2400,
+    "source": "HCI/brochure-2012/WhatsApp Image 2026-08-27 at 9.01.42 PM.jpeg"
+  },
+  {
+    "slug": "brochure-inside",
+    "group": "place",
+    "caption": "Inside the brochure: Showcasing Craftsmanship since 1969",
+    "width": 1109,
+    "height": 2400,
+    "source": "HCI/brochure-2012/WhatsApp Image 2026-08-27 at 9.01.55 PM.jpeg"
+  },
+  {
+    "slug": "brochure-closed",
+    "group": "place",
+    "caption": "The brochure, closed",
+    "width": 2400,
+    "height": 1109,
+    "source": "HCI/WhatsApp Image 2026-08-27 at 9.02.54 PM.jpeg"
+  },
+  {
+    "slug": "prod-crinkle-blue",
+    "group": "product",
+    "caption": "Crinkled tie-dye silk in peacock blue and green",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/present-media/image1.jpeg"
+  },
+  {
+    "slug": "prod-bandhani-black",
+    "group": "product",
+    "caption": "Black-and-white bandhani silk, hand-knotted",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/present-media/image2.jpeg"
+  },
+  {
+    "slug": "prod-papier-mache",
+    "group": "product",
+    "caption": "Hand-painted papier-mâché boxes, Kashmir",
+    "width": 1800,
+    "height": 2400,
+    "source": "HCI/present-media/image3.jpeg"
+  },
+  {
+    "slug": "prod-cutwork-polaroids",
+    "group": "product",
+    "caption": "White-on-white appliqué cutwork samples",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/present-media/image4.jpeg"
+  },
+  {
+    "slug": "prod-kantha-animal-cushions",
+    "group": "product",
+    "caption": "Kantha-embroidered animal cushions",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/present-media/image5.jpeg"
+  },
+  {
+    "slug": "sohel-dye-pots",
+    "group": "people",
+    "caption": "Sohel Weldingwala among the dye pots at a printing workshop, 2014",
+    "width": 2400,
+    "height": 1351,
+    "source": "Sohel/20140302_115006.jpg"
+  },
+  {
+    "slug": "sohel-portrait",
+    "group": "people",
+    "caption": "Sohel Weldingwala",
+    "width": 2400,
+    "height": 1862,
+    "source": "Sohel/20140302_115006 - Copya.jpg"
+  },
+  {
+    "slug": "sohel-block",
+    "group": "people",
+    "caption": "A hand-carved teak printing block",
+    "width": 2400,
+    "height": 1351,
+    "source": "Sohel/20140302_153514.jpg"
+  },
+  {
+    "slug": "sohel-showroom-2007",
+    "group": "people",
+    "caption": "At the showroom desk, 2007",
+    "width": 2400,
+    "height": 1800,
+    "source": "Sohel/107_1237.JPG"
+  },
+  {
+    "slug": "dye-wall",
+    "group": "process",
+    "caption": "The dyer's wall",
+    "width": 2400,
+    "height": 1351,
+    "source": "Sohel/20140302_114947.jpg"
+  },
+  {
+    "slug": "visitors-01",
+    "group": "people",
+    "caption": "Buyers at the showroom table",
+    "width": 2400,
+    "height": 1800,
+    "source": "Customers_Visitors/107_1304.JPG"
+  },
+  {
+    "slug": "visitors-02",
+    "group": "people",
+    "caption": "Visitors in the showroom",
+    "width": 2400,
+    "height": 1800,
+    "source": "Customers_Visitors/107_1305.JPG"
+  },
+  {
+    "slug": "visitors-03",
+    "group": "people",
+    "caption": "A client visit",
+    "width": 2400,
+    "height": 1800,
+    "source": "Customers_Visitors/107_2779.JPG"
+  },
+  {
+    "slug": "visitors-04",
+    "group": "people",
+    "caption": "Clients in the showroom",
+    "width": 2400,
+    "height": 1800,
+    "source": "Customers_Visitors/IMG_4673.JPG"
+  },
+  {
+    "slug": "visitors-05",
+    "group": "people",
+    "caption": "Visitors at Honeycomb",
+    "width": 2400,
+    "height": 1800,
+    "source": "Customers_Visitors/107_1500.JPG"
+  },
+  {
+    "slug": "prod-quilt-caravane",
+    "group": "product",
+    "caption": "Red block-print quilt developed for Caravane, Paris",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Caravane Red Quilt.jpg"
+  },
+  {
+    "slug": "prod-quilt-zara-1",
+    "group": "product",
+    "caption": "Tie-dye striped quilts for Zara Home, 2005",
+    "width": 1600,
+    "height": 2400,
+    "source": "New Products/Quilts/zara 2005 001.jpg"
+  },
+  {
+    "slug": "prod-quilt-zara-2",
+    "group": "product",
+    "caption": "Tie-dye quilts, Zara Home 2005",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/zara 2005 004.jpg"
+  },
+  {
+    "slug": "prod-quilt-jharokha",
+    "group": "product",
+    "caption": "Jharokha quilt",
+    "width": 2400,
+    "height": 1562,
+    "source": "New Products/Quilts/Jharokha.jpg"
+  },
+  {
+    "slug": "prod-quilt-colormagic",
+    "group": "product",
+    "caption": "Colour Magic patchwork quilt",
+    "width": 2400,
+    "height": 1562,
+    "source": "New Products/Quilts/Color Magic.JPG"
+  },
+  {
+    "slug": "prod-quilt-milan",
+    "group": "product",
+    "caption": "Milan appliqué quilt",
+    "width": 1600,
+    "height": 2400,
+    "source": "New Products/Quilts/Milan Applique-1.jpg"
+  },
+  {
+    "slug": "prod-quilt-pieced-1",
+    "group": "product",
+    "caption": "Hand-pieced triangle quilt",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Quilts/P0000541.jpg"
+  },
+  {
+    "slug": "prod-quilt-pieced-2",
+    "group": "product",
+    "caption": "Hand-pieced quilt, detail",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Quilts/P0000543.jpg"
+  },
+  {
+    "slug": "prod-quilt-green-1",
+    "group": "product",
+    "caption": "Patchwork quilts",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Quilts/Picture 003.jpg"
+  },
+  {
+    "slug": "prod-quilt-green-2",
+    "group": "product",
+    "caption": "Patchwork quilt",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Quilts/Picture 007.jpg"
+  },
+  {
+    "slug": "prod-quilt-print-1",
+    "group": "product",
+    "caption": "Block-printed patchwork quilt",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Quilts/IMG_3803.JPG"
+  },
+  {
+    "slug": "prod-quilt-print-2",
+    "group": "product",
+    "caption": "Block-printed patchwork quilt",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Quilts/IMG_3807.JPG"
+  },
+  {
+    "slug": "prod-quilt-print-3",
+    "group": "product",
+    "caption": "Block-printed quilt, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Quilts/IMG_3810.JPG"
+  },
+  {
+    "slug": "prod-quilt-indigo-1",
+    "group": "product",
+    "caption": "Indigo bubble quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Bubble Quilt Indigo.jpg"
+  },
+  {
+    "slug": "prod-quilt-indigo-2",
+    "group": "product",
+    "caption": "Indigo quilts",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Quilts/Indigo Quilts.jpg"
+  },
+  {
+    "slug": "prod-quilt-indigo-3",
+    "group": "product",
+    "caption": "Reverse-print indigo quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Reve Print Indigo.jpg"
+  },
+  {
+    "slug": "prod-quilt-star",
+    "group": "product",
+    "caption": "Star quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Star.jpg"
+  },
+  {
+    "slug": "prod-quilt-whitestar",
+    "group": "product",
+    "caption": "White star quilt",
+    "width": 2400,
+    "height": 1798,
+    "source": "New Products/Quilts/WHT STAR QUILT.jpg"
+  },
+  {
+    "slug": "prod-quilt-silk-td",
+    "group": "product",
+    "caption": "Tie-dyed silk quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Silk TD1.jpg"
+  },
+  {
+    "slug": "prod-quilt-leheria",
+    "group": "product",
+    "caption": "Leheria silk quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Leharia.jpg"
+  },
+  {
+    "slug": "prod-quilt-silk-shaded",
+    "group": "product",
+    "caption": "Shaded silk quilt",
+    "width": 1600,
+    "height": 2400,
+    "source": "New Products/Quilts/Silk Shaded.jpg"
+  },
+  {
+    "slug": "prod-quilt-kodi",
+    "group": "product",
+    "caption": "Kodi chintz quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Kodi Chint.jpg"
+  },
+  {
+    "slug": "prod-quilt-feather",
+    "group": "product",
+    "caption": "Feather quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Feathure Quilt.jpg"
+  },
+  {
+    "slug": "prod-quilt-jardin",
+    "group": "product",
+    "caption": "Jardin quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Jardin.jpg"
+  },
+  {
+    "slug": "prod-quilt-nippon",
+    "group": "product",
+    "caption": "Nippon quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Nippon.jpg"
+  },
+  {
+    "slug": "prod-quilt-wonderful",
+    "group": "product",
+    "caption": "Wonderful quilt",
+    "width": 1600,
+    "height": 2400,
+    "source": "New Products/Quilts/Wonderful front.jpg"
+  },
+  {
+    "slug": "prod-quilt-redcenter",
+    "group": "product",
+    "caption": "Red-centre quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Quilts/Quilt Red Center.jpg"
+  },
+  {
+    "slug": "prod-quilt-ajrakh",
+    "group": "product",
+    "caption": "Ajrakh block-print quilt",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Quilts/block-print-ajrak.jpg"
+  },
+  {
+    "slug": "prod-kantha-quilt-1",
+    "group": "product",
+    "caption": "Hand-quilted indigo kantha bedcover",
+    "width": 1351,
+    "height": 2400,
+    "source": "HCI/LINTAS/DSC00474.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-2",
+    "group": "product",
+    "caption": "Indigo kantha quilt, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00476.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-3",
+    "group": "product",
+    "caption": "Striped kantha throw",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00480.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-4",
+    "group": "product",
+    "caption": "Kantha quilts",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00483.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-5",
+    "group": "product",
+    "caption": "Hand-stitched kantha bedcover",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00487.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-6",
+    "group": "product",
+    "caption": "Kantha quilt",
+    "width": 2400,
+    "height": 1351,
+    "source": "HCI/LINTAS/DSC00494.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-7",
+    "group": "product",
+    "caption": "Kantha quilt, detail",
+    "width": 2400,
+    "height": 1351,
+    "source": "HCI/LINTAS/DSC00495.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-8",
+    "group": "product",
+    "caption": "Bandhani silk quilt",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00496.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-9",
+    "group": "product",
+    "caption": "Rolled quilts",
+    "width": 2400,
+    "height": 1351,
+    "source": "HCI/LINTAS/DSC00502.JPG"
+  },
+  {
+    "slug": "prod-kantha-quilt-10",
+    "group": "product",
+    "caption": "Quilts, folded",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00504.JPG"
+  },
+  {
+    "slug": "prod-bedcover-applique-1",
+    "group": "product",
+    "caption": "Indigo and madder appliqué bedcover",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00537.JPG"
+  },
+  {
+    "slug": "prod-bedcover-applique-2",
+    "group": "product",
+    "caption": "Appliqué bedcover, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00538.JPG"
+  },
+  {
+    "slug": "prod-bedcover-applique-3",
+    "group": "product",
+    "caption": "Appliqué squares",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00539.JPG"
+  },
+  {
+    "slug": "prod-cutwork-bedcover",
+    "group": "product",
+    "caption": "White-on-white cutwork bedcover, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00534.JPG"
+  },
+  {
+    "slug": "prod-cutwork-bed",
+    "group": "product",
+    "caption": "Cutwork bedcover on the bed",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00535.JPG"
+  },
+  {
+    "slug": "prod-quilt-rolled",
+    "group": "product",
+    "caption": "Rolled quilts",
+    "width": 2400,
+    "height": 1601,
+    "source": "HCI/LINTAS/Quilt-5.jpg"
+  },
+  {
+    "slug": "prod-quilt-leheria-2",
+    "group": "product",
+    "caption": "Leheria stripe silk quilt",
+    "width": 2400,
+    "height": 1600,
+    "source": "HCI/LINTAS/Silk Leheria stripe-2.jpg"
+  },
+  {
+    "slug": "prod-quilt-9a",
+    "group": "product",
+    "caption": "Kantha quilts",
+    "width": 2400,
+    "height": 1662,
+    "source": "HCI/LINTAS/Quilt-9a.jpg"
+  },
+  {
+    "slug": "prod-cushion-zardozi-1",
+    "group": "product",
+    "caption": "Zardozi silk cushion",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_1280.JPG"
+  },
+  {
+    "slug": "prod-cushion-zardozi-2",
+    "group": "product",
+    "caption": "Embroidered silk cushion",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_1283.JPG"
+  },
+  {
+    "slug": "prod-cushion-zardozi-3",
+    "group": "product",
+    "caption": "Silk cushion with metal-thread embroidery",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_1286.JPG"
+  },
+  {
+    "slug": "prod-cushion-print-1",
+    "group": "product",
+    "caption": "Block-printed cushion",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_2136.JPG"
+  },
+  {
+    "slug": "prod-cushion-print-2",
+    "group": "product",
+    "caption": "Block-printed cushions",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_2140.JPG"
+  },
+  {
+    "slug": "prod-cushion-print-3",
+    "group": "product",
+    "caption": "Block-printed floral cushion",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_2145.JPG"
+  },
+  {
+    "slug": "prod-cushion-print-4",
+    "group": "product",
+    "caption": "Block-printed cushions",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/107_2150.JPG"
+  },
+  {
+    "slug": "prod-cushion-applique-1",
+    "group": "product",
+    "caption": "Appliqué cushion",
+    "width": 2400,
+    "height": 1798,
+    "source": "New Products/Cushion Cover/104_0464.JPG"
+  },
+  {
+    "slug": "prod-cushion-applique-2",
+    "group": "product",
+    "caption": "Appliqué cushions",
+    "width": 2400,
+    "height": 1798,
+    "source": "New Products/Cushion Cover/104_0467.JPG"
+  },
+  {
+    "slug": "prod-cushion-kantha-1",
+    "group": "product",
+    "caption": "Kantha animal cushion",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Cushion Cover/IMG_4706.JPG"
+  },
+  {
+    "slug": "prod-cushion-kantha-2",
+    "group": "product",
+    "caption": "Kantha-embroidered cushions",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Cushion Cover/IMG_4708.JPG"
+  },
+  {
+    "slug": "prod-cushion-set",
+    "group": "product",
+    "caption": "Cushion covers",
+    "width": 2400,
+    "height": 1600,
+    "source": "New Products/Cushion Cover/cushion covers 002.jpg"
+  },
+  {
+    "slug": "prod-cushion-tribal",
+    "group": "product",
+    "caption": "Tribal embroidered cushions",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/tribal cushions.jpg"
+  },
+  {
+    "slug": "prod-cushion-honeycomb",
+    "group": "product",
+    "caption": "Embroidered cushion",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/honycombcushion2.jpg"
+  },
+  {
+    "slug": "prod-cushion-patchwork",
+    "group": "product",
+    "caption": "Traditional patchwork cushion cover",
+    "width": 1781,
+    "height": 2400,
+    "source": "HCI/LINTAS/Patchwork CC Tradnl.jpg"
+  },
+  {
+    "slug": "prod-cutwork-1",
+    "group": "product",
+    "caption": "White appliqué cutwork bedcover",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Applique Work_Patchwork/28May04 028.jpg"
+  },
+  {
+    "slug": "prod-cutwork-2",
+    "group": "product",
+    "caption": "Appliqué cutwork, detail",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Applique Work_Patchwork/28May04 030.jpg"
+  },
+  {
+    "slug": "prod-cutwork-3",
+    "group": "product",
+    "caption": "Cutwork bedcover",
+    "width": 2384,
+    "height": 2400,
+    "source": "New Products/Applique Work_Patchwork/28May04 042.jpg"
+  },
+  {
+    "slug": "prod-cutwork-4",
+    "group": "product",
+    "caption": "Cutwork, detail",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Applique Work_Patchwork/28May04 047.jpg"
+  },
+  {
+    "slug": "prod-treeoflife-1",
+    "group": "product",
+    "caption": "Tree of life appliqué panel",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Applique Work_Patchwork/21june04 083.jpg"
+  },
+  {
+    "slug": "prod-treeoflife-2",
+    "group": "product",
+    "caption": "Tree of life appliqué",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Applique Work_Patchwork/21june04 086.jpg"
+  },
+  {
+    "slug": "prod-pieced-quilt",
+    "group": "product",
+    "caption": "Pieced quilt",
+    "width": 2400,
+    "height": 1601,
+    "source": "New Products/Applique Work_Patchwork/21june04 001.jpg"
+  },
+  {
+    "slug": "prod-curtain-cutwork-1",
+    "group": "product",
+    "caption": "Appliqué cutwork curtain",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Applique Work_Patchwork/IMG_4636.JPG"
+  },
+  {
+    "slug": "prod-curtain-cutwork-2",
+    "group": "product",
+    "caption": "Cutwork curtain in the window",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Applique Work_Patchwork/IMG_4643.JPG"
+  },
+  {
+    "slug": "prod-curtain-cutwork-3",
+    "group": "product",
+    "caption": "Cutwork curtains",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Applique Work_Patchwork/IMG_4653.JPG"
+  },
+  {
+    "slug": "prod-tablecloth-1",
+    "group": "product",
+    "caption": "Cutwork tablecloth",
+    "width": 2400,
+    "height": 1600,
+    "source": "HCI/LINTAS/Table Cloth-1.jpg"
+  },
+  {
+    "slug": "prod-tablecloth-3",
+    "group": "product",
+    "caption": "White cutwork tablecloth",
+    "width": 2400,
+    "height": 1600,
+    "source": "HCI/LINTAS/Table cloth-3.jpg"
+  },
+  {
+    "slug": "prod-tree-cutwork",
+    "group": "product",
+    "caption": "Tree of life cutwork panel",
+    "width": 1534,
+    "height": 2400,
+    "source": "HCI/LINTAS/Tree.jpg"
+  },
+  {
+    "slug": "prod-milan-applique",
+    "group": "product",
+    "caption": "Milan appliqué cushions",
+    "width": 2400,
+    "height": 1600,
+    "source": "HCI/LINTAS/Milan Applique-2.jpg"
+  },
+  {
+    "slug": "prod-cutwork-flowers",
+    "group": "product",
+    "caption": "Appliqué flowers",
+    "width": 1800,
+    "height": 2400,
+    "source": "HCI/LINTAS/IMG_4637.JPG"
+  },
+  {
+    "slug": "prod-cutwork-lattice",
+    "group": "product",
+    "caption": "Cutwork lattice",
+    "width": 1800,
+    "height": 2400,
+    "source": "HCI/LINTAS/IMG_4642.JPG"
+  },
+  {
+    "slug": "prod-tablelinen-1",
+    "group": "product",
+    "caption": "Block-printed table linen",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Table Linen/107_2836.JPG"
+  },
+  {
+    "slug": "prod-tablelinen-2",
+    "group": "product",
+    "caption": "Table linen",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Table Linen/107_2838.JPG"
+  },
+  {
+    "slug": "prod-bedcover-indigo",
+    "group": "product",
+    "caption": "Natural indigo hand block-printed bedcover",
+    "width": 1730,
+    "height": 2400,
+    "source": "New Products/Bed Covers/INDIGO (NATRUAL DYE) HAND BLOCK PRINTED.jpg"
+  },
+  {
+    "slug": "prod-bedcover-print",
+    "group": "product",
+    "caption": "Block-printed bedcover",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Bed Covers/107_2839.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-1",
+    "group": "product",
+    "caption": "Ajrakh block-print table cover",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_002_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-2",
+    "group": "product",
+    "caption": "Block-printed table cover",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_006_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-3",
+    "group": "product",
+    "caption": "Ajrakh table cover, detail",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_009_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-4",
+    "group": "product",
+    "caption": "Block-printed table cover",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_013_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-5",
+    "group": "product",
+    "caption": "Block-printed cloth",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_020_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-6",
+    "group": "product",
+    "caption": "Block-printed table cover",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_033_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-7",
+    "group": "product",
+    "caption": "Block print on the table",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_072_TMDP.JPG"
+  },
+  {
+    "slug": "prod-ajrakh-table-8",
+    "group": "product",
+    "caption": "Block-printed table cover",
+    "width": 2000,
+    "height": 1328,
+    "source": "New Products/Print/20090408_086_TMDP.JPG"
+  },
+  {
+    "slug": "prod-print-swatch-1",
+    "group": "product",
+    "caption": "Indigo block-print swatches",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00359.JPG"
+  },
+  {
+    "slug": "prod-print-swatch-2",
+    "group": "product",
+    "caption": "Indigo prints",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00361.JPG"
+  },
+  {
+    "slug": "prod-print-swatch-3",
+    "group": "product",
+    "caption": "Mustard and indigo geometric prints",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00363.JPG"
+  },
+  {
+    "slug": "prod-print-swatch-4",
+    "group": "product",
+    "caption": "Geometric block prints",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00365.JPG"
+  },
+  {
+    "slug": "prod-print-cushions",
+    "group": "product",
+    "caption": "Block-printed cushions",
+    "width": 1600,
+    "height": 2400,
+    "source": "HCI/LINTAS/Print-1.jpg"
+  },
+  {
+    "slug": "prod-printed-quilts",
+    "group": "product",
+    "caption": "Printed quilts",
+    "width": 2400,
+    "height": 1085,
+    "source": "HCI/LINTAS/Printed Quilts.jpg"
+  },
+  {
+    "slug": "prod-print-patch-1",
+    "group": "product",
+    "caption": "Block-print patchwork",
+    "width": 2400,
+    "height": 1600,
+    "source": "HCI/LINTAS/P0001123.jpg"
+  },
+  {
+    "slug": "prod-print-patch-2",
+    "group": "product",
+    "caption": "Indigo patchwork",
+    "width": 2400,
+    "height": 1577,
+    "source": "HCI/LINTAS/P0001130.jpg"
+  },
+  {
+    "slug": "prod-scarf-crinkle-1",
+    "group": "product",
+    "caption": "Crinkled silk scarves",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00547.JPG"
+  },
+  {
+    "slug": "prod-scarf-crinkle-2",
+    "group": "product",
+    "caption": "Crinkle silk in saffron and pink",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00549.JPG"
+  },
+  {
+    "slug": "prod-scarf-crinkle-3",
+    "group": "product",
+    "caption": "Crinkle silk in olive",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00551.JPG"
+  },
+  {
+    "slug": "prod-scarf-rolls-1",
+    "group": "product",
+    "caption": "Silk scarves, rolled",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00553.JPG"
+  },
+  {
+    "slug": "prod-shibori-1",
+    "group": "product",
+    "caption": "Shibori silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00556.JPG"
+  },
+  {
+    "slug": "prod-bandhani-pink",
+    "group": "product",
+    "caption": "Pink bandhani silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00565.JPG"
+  },
+  {
+    "slug": "prod-bandhani-teal",
+    "group": "product",
+    "caption": "Bandhani in teal",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00569.JPG"
+  },
+  {
+    "slug": "prod-scarf-stack",
+    "group": "product",
+    "caption": "Bandhani silk stoles",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00571.JPG"
+  },
+  {
+    "slug": "prod-scarf-rolls-2",
+    "group": "product",
+    "caption": "Tie-dye scarves, rolled",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00580.JPG"
+  },
+  {
+    "slug": "prod-bandhani-rose",
+    "group": "product",
+    "caption": "Rose bandhani",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00586.JPG"
+  },
+  {
+    "slug": "prod-bandhani-paisley",
+    "group": "product",
+    "caption": "Bandhani paisley on silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00589.JPG"
+  },
+  {
+    "slug": "prod-bandhani-paisley-2",
+    "group": "product",
+    "caption": "Bandhani paisley, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00592.JPG"
+  },
+  {
+    "slug": "prod-shibori-olive",
+    "group": "product",
+    "caption": "Olive shibori silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00594.JPG"
+  },
+  {
+    "slug": "prod-shibori-gold",
+    "group": "product",
+    "caption": "Gold shibori silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/DSC00596.JPG"
+  },
+  {
+    "slug": "prod-shibori-black",
+    "group": "product",
+    "caption": "Black shibori silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Tie Dye/IMG_0724.JPG"
+  },
+  {
+    "slug": "prod-tiedye-1",
+    "group": "product",
+    "caption": "Tie-dyed silk",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Tie Dye/IMG_0790.JPG"
+  },
+  {
+    "slug": "prod-tiedye-2",
+    "group": "product",
+    "caption": "Tie-dyed silk",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Tie Dye/IMG_0806.JPG"
+  },
+  {
+    "slug": "prod-tiedye-3",
+    "group": "product",
+    "caption": "Tie-dye",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Tie Dye/IMG_0816.JPG"
+  },
+  {
+    "slug": "prod-tiedye-4",
+    "group": "product",
+    "caption": "Tie-dyed silk",
+    "width": 1349,
+    "height": 2400,
+    "source": "New Products/Tie Dye/20140302_224414.jpg"
+  },
+  {
+    "slug": "prod-bag-1",
+    "group": "product",
+    "caption": "Embroidered bag, Kutch",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_142934.jpg"
+  },
+  {
+    "slug": "prod-bag-2",
+    "group": "product",
+    "caption": "Embroidered bag",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_143046.jpg"
+  },
+  {
+    "slug": "prod-bag-3",
+    "group": "product",
+    "caption": "Embroidered bag",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_143359.jpg"
+  },
+  {
+    "slug": "prod-bag-4",
+    "group": "product",
+    "caption": "Embroidered clutch",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_143500.jpg"
+  },
+  {
+    "slug": "prod-bag-5",
+    "group": "product",
+    "caption": "Mirror-work bag",
+    "width": 1349,
+    "height": 2400,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_144008.jpg"
+  },
+  {
+    "slug": "prod-bag-6",
+    "group": "product",
+    "caption": "Embroidered bag",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_144842.jpg"
+  },
+  {
+    "slug": "prod-bag-7",
+    "group": "product",
+    "caption": "Embroidered bag",
+    "width": 1349,
+    "height": 2400,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140128_145405.jpg"
+  },
+  {
+    "slug": "prod-scarf-1",
+    "group": "product",
+    "caption": "Scarves",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140227_114406.jpg"
+  },
+  {
+    "slug": "prod-scarf-2",
+    "group": "product",
+    "caption": "Scarves",
+    "width": 2400,
+    "height": 1351,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140227_120134.jpg"
+  },
+  {
+    "slug": "prod-scarf-3",
+    "group": "product",
+    "caption": "Scarves",
+    "width": 1349,
+    "height": 2400,
+    "source": "New Products/Fashion Accessories (Scarves_Bags)/20140227_151326.jpg"
+  },
+  {
+    "slug": "prod-hanging-1",
+    "group": "product",
+    "caption": "Embroidered wall hanging",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Wall Hanging/107_2611.JPG"
+  },
+  {
+    "slug": "prod-hanging-2",
+    "group": "product",
+    "caption": "Appliqué wall hanging",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Wall Hanging/107_2617.JPG"
+  },
+  {
+    "slug": "prod-hanging-3",
+    "group": "product",
+    "caption": "Wall hanging",
+    "width": 2400,
+    "height": 1800,
+    "source": "New Products/Wall Hanging/107_2625.JPG"
+  },
+  {
+    "slug": "prod-hanging-4",
+    "group": "product",
+    "caption": "Embroidered wall hanging",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/107_2640.JPG"
+  },
+  {
+    "slug": "prod-hanging-5",
+    "group": "product",
+    "caption": "Wall hanging",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/107_2645.JPG"
+  },
+  {
+    "slug": "prod-hanging-sohel",
+    "group": "product",
+    "caption": "Appliqué wall hanging designed by Sohel",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/22[1].Sohel_s applique wall hanging.JPG"
+  },
+  {
+    "slug": "prod-hanging-6",
+    "group": "product",
+    "caption": "Appliqué wall hanging",
+    "width": 1601,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/wall-hanging.jpg"
+  },
+  {
+    "slug": "prod-hanging-figures",
+    "group": "product",
+    "caption": "Figurative appliqué hanging",
+    "width": 2400,
+    "height": 1817,
+    "source": "New Products/Wall Hanging/patchwork-fig.jpg"
+  },
+  {
+    "slug": "prod-hanging-7",
+    "group": "product",
+    "caption": "Wall hanging",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/107_1495.JPG"
+  },
+  {
+    "slug": "prod-hanging-8",
+    "group": "product",
+    "caption": "Wall hanging",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/107_2505.JPG"
+  },
+  {
+    "slug": "prod-hanging-9",
+    "group": "product",
+    "caption": "Wall hanging",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Wall Hanging/107_2528.JPG"
+  },
+  {
+    "slug": "prod-embroidery-1",
+    "group": "product",
+    "caption": "Hand embroidery",
+    "width": 2124,
+    "height": 2304,
+    "source": "New Products/Embroidery/107_1232a.jpg"
+  },
+  {
+    "slug": "prod-embroidery-2",
+    "group": "product",
+    "caption": "Hand embroidery",
+    "width": 1800,
+    "height": 2400,
+    "source": "New Products/Embroidery/IMG_4512.JPG"
+  },
+  {
+    "slug": "trad-01",
+    "group": "archive",
+    "caption": "Antique embroidered chakla, Kutch",
+    "width": 2400,
+    "height": 1351,
+    "source": "Traditional Items/20140128_163409.jpg"
+  },
+  {
+    "slug": "trad-02",
+    "group": "archive",
+    "caption": "Embroidered square, Saurashtra",
+    "width": 1349,
+    "height": 2400,
+    "source": "Traditional Items/20140128_163647.jpg"
+  },
+  {
+    "slug": "trad-03",
+    "group": "archive",
+    "caption": "Mirror-work embroidery",
+    "width": 1349,
+    "height": 2400,
+    "source": "Traditional Items/20140128_163716.jpg"
+  },
+  {
+    "slug": "trad-04",
+    "group": "archive",
+    "caption": "Embroidered hanging",
+    "width": 2400,
+    "height": 1351,
+    "source": "Traditional Items/20140128_163801.jpg"
+  },
+  {
+    "slug": "trad-05",
+    "group": "archive",
+    "caption": "Embroidered textile",
+    "width": 2400,
+    "height": 1351,
+    "source": "Traditional Items/20140128_163848.jpg"
+  },
+  {
+    "slug": "trad-06",
+    "group": "archive",
+    "caption": "Embroidered textile",
+    "width": 2400,
+    "height": 1351,
+    "source": "Traditional Items/20140128_163939.jpg"
+  },
+  {
+    "slug": "trad-07",
+    "group": "archive",
+    "caption": "Traditional embroidery",
+    "width": 1349,
+    "height": 2400,
+    "source": "Traditional Items/20131118_171921.jpg"
+  },
+  {
+    "slug": "trad-08",
+    "group": "archive",
+    "caption": "Antique embroidered cushion cover",
+    "width": 1800,
+    "height": 2400,
+    "source": "Traditional Items/IMG_3372.JPG"
+  },
+  {
+    "slug": "trad-09",
+    "group": "archive",
+    "caption": "Antique embroidered textile",
+    "width": 2400,
+    "height": 1800,
+    "source": "Traditional Items/IMG_3375.JPG"
+  },
+  {
+    "slug": "trad-10",
+    "group": "archive",
+    "caption": "Embroidered chakla",
+    "width": 1800,
+    "height": 2400,
+    "source": "Traditional Items/IMG_3378.JPG"
+  },
+  {
+    "slug": "trad-11",
+    "group": "archive",
+    "caption": "Embroidered square",
+    "width": 1800,
+    "height": 2400,
+    "source": "Traditional Items/IMG_3381.JPG"
+  },
+  {
+    "slug": "trad-12",
+    "group": "archive",
+    "caption": "Antique textile",
+    "width": 2400,
+    "height": 1800,
+    "source": "Traditional Items/IMG_4189.JPG"
+  },
+  {
+    "slug": "trad-13",
+    "group": "archive",
+    "caption": "Traditional textile",
+    "width": 2400,
+    "height": 1800,
+    "source": "Traditional Items/IMG_0894.jpg"
+  },
+  {
+    "slug": "arch-kashmir-11",
+    "group": "archive",
+    "caption": "Kashmir moon shawl, centre medallion",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/100_0082.JPG"
+  },
+  {
+    "slug": "arch-kashmir-12",
+    "group": "archive",
+    "caption": "Kashmir shawl, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/100_0085.JPG"
+  },
+  {
+    "slug": "arch-kashmir-13",
+    "group": "archive",
+    "caption": "Kashmir shawl with paisley corners",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/100_0077.JPG"
+  },
+  {
+    "slug": "arch-kashmir-14",
+    "group": "archive",
+    "caption": "Kashmir shawl",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/100_0079.JPG"
+  },
+  {
+    "slug": "arch-phulkari-01",
+    "group": "archive",
+    "caption": "Phulkari, Punjab",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/101_0162.JPG"
+  },
+  {
+    "slug": "arch-phulkari-02",
+    "group": "archive",
+    "caption": "Phulkari border",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20130917_124010.jpg"
+  },
+  {
+    "slug": "arch-phulkari-03",
+    "group": "archive",
+    "caption": "Phulkari bagh",
+    "width": 1349,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/20130917_124242.jpg"
+  },
+  {
+    "slug": "arch-phulkari-04",
+    "group": "archive",
+    "caption": "Phulkari, detail",
+    "width": 1349,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/20130917_124455.jpg"
+  },
+  {
+    "slug": "arch-phulkari-05",
+    "group": "archive",
+    "caption": "Phulkari with diamond lattice",
+    "width": 1349,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/20130917_125006.jpg"
+  },
+  {
+    "slug": "arch-phulkari-06",
+    "group": "archive",
+    "caption": "Phulkari bagh, detail",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20130917_125404.jpg"
+  },
+  {
+    "slug": "arch-phulkari-07",
+    "group": "archive",
+    "caption": "Phulkari bagh",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_3412.JPG"
+  },
+  {
+    "slug": "arch-phulkari-08",
+    "group": "archive",
+    "caption": "Phulkari bagh, detail",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/IMG_3414.JPG"
+  },
+  {
+    "slug": "arch-canopy-01",
+    "group": "archive",
+    "caption": "Embroidered canopy tent, Saurashtra",
+    "width": 2400,
+    "height": 1798,
+    "source": "Collection Old Textiles_Jewellery/105_0536.JPG"
+  },
+  {
+    "slug": "arch-canopy-02",
+    "group": "archive",
+    "caption": "Embroidered canopy",
+    "width": 2400,
+    "height": 1798,
+    "source": "Collection Old Textiles_Jewellery/105_0538.JPG"
+  },
+  {
+    "slug": "arch-frieze-01",
+    "group": "archive",
+    "caption": "Embroidered frieze with animals, Saurashtra",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/107_2780.JPG"
+  },
+  {
+    "slug": "arch-frieze-02",
+    "group": "archive",
+    "caption": "Embroidered frieze with riders",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/107_2784.JPG"
+  },
+  {
+    "slug": "arch-frieze-03",
+    "group": "archive",
+    "caption": "Embroidered frieze with animals",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/107_2786.JPG"
+  },
+  {
+    "slug": "arch-frieze-04",
+    "group": "archive",
+    "caption": "Embroidered frieze with geometric bands",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/107_2788.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-10",
+    "group": "archive",
+    "caption": "Kalamkari prayer cloth",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0070.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-11",
+    "group": "archive",
+    "caption": "Kalamkari with animals",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0083.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-12",
+    "group": "archive",
+    "caption": "Kalamkari with calligraphy",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0096.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-13",
+    "group": "archive",
+    "caption": "Kalamkari prayer cloth with cypress",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/IMG_0099.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-14",
+    "group": "archive",
+    "caption": "Kalamkari border",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0113.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-15",
+    "group": "archive",
+    "caption": "Kalamkari with portrait medallions",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0132.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-16",
+    "group": "archive",
+    "caption": "Kalamkari with lotus vine",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/IMG_0146.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-17",
+    "group": "archive",
+    "caption": "Kalamkari with animals",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0149.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-18",
+    "group": "archive",
+    "caption": "Kalamkari with palms",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0161.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-19",
+    "group": "archive",
+    "caption": "Kalamkari, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_0165.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-20",
+    "group": "archive",
+    "caption": "Kalamkari, Masulipatnam",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/KALAMKARI MASULIPATTAM/107_3979.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-21",
+    "group": "archive",
+    "caption": "Kalamkari, Masulipatnam",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/KALAMKARI MASULIPATTAM/107_3983.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-22",
+    "group": "archive",
+    "caption": "Kalamkari, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/KALAMKARI MASULIPATTAM/107_3999.JPG"
+  },
+  {
+    "slug": "arch-kalamkari-23",
+    "group": "archive",
+    "caption": "Kalamkari prayer cloth",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/KALAMKARI MASULIPATTAM/107_4002.JPG"
+  },
+  {
+    "slug": "arch-blockprint-01",
+    "group": "archive",
+    "caption": "Antique block-printed cloth",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/BLOCK PRINT/107_2856.JPG"
+  },
+  {
+    "slug": "arch-blockprint-02",
+    "group": "archive",
+    "caption": "Block print, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/BLOCK PRINT/107_2861.JPG"
+  },
+  {
+    "slug": "arch-blockprint-03",
+    "group": "archive",
+    "caption": "Block-printed floral",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/BLOCK PRINT/107_2867.JPG"
+  },
+  {
+    "slug": "arch-blockprint-04",
+    "group": "archive",
+    "caption": "Block-printed border",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/BLOCK PRINT/107_2870.JPG"
+  },
+  {
+    "slug": "arch-blockprint-05",
+    "group": "archive",
+    "caption": "Block-printed cloth",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/BLOCK PRINT/107_3324.JPG"
+  },
+  {
+    "slug": "arch-blockprint-06",
+    "group": "archive",
+    "caption": "Block print, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/BLOCK PRINT/107_3328.JPG"
+  },
+  {
+    "slug": "arch-painted-02",
+    "group": "archive",
+    "caption": "Painted narrative cloth",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_02_14/107_2941.JPG"
+  },
+  {
+    "slug": "arch-painted-03",
+    "group": "archive",
+    "caption": "Painted narrative cloth, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_02_14/107_2946.JPG"
+  },
+  {
+    "slug": "arch-painted-04",
+    "group": "archive",
+    "caption": "Painted cloth with riders",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_02_14/107_2948.JPG"
+  },
+  {
+    "slug": "arch-painted-05",
+    "group": "archive",
+    "caption": "Painted cloth, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_02_14/107_2950.JPG"
+  },
+  {
+    "slug": "arch-painted-06",
+    "group": "archive",
+    "caption": "Painted narrative panel",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_04_12/107_3044.JPG"
+  },
+  {
+    "slug": "arch-painted-07",
+    "group": "archive",
+    "caption": "Painted panel, detail",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_04_12/107_3047.JPG"
+  },
+  {
+    "slug": "arch-painted-08",
+    "group": "archive",
+    "caption": "Painted panel with figures",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_04_12/107_3050.JPG"
+  },
+  {
+    "slug": "arch-zardozi-01",
+    "group": "archive",
+    "caption": "Zardozi skirt",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_04_14/107_3055.JPG"
+  },
+  {
+    "slug": "arch-chintz-01",
+    "group": "archive",
+    "caption": "Printed chintz",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_04_14/107_3061.JPG"
+  },
+  {
+    "slug": "arch-zardozi-02",
+    "group": "archive",
+    "caption": "Zardozi square",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_04_16/107_3068.JPG"
+  },
+  {
+    "slug": "arch-zardozi-03",
+    "group": "archive",
+    "caption": "Zardozi on velvet",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/FILE0331.JPG"
+  },
+  {
+    "slug": "arch-zardozi-04",
+    "group": "archive",
+    "caption": "Zardozi on velvet, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/FILE0335.JPG"
+  },
+  {
+    "slug": "arch-zardozi-05",
+    "group": "archive",
+    "caption": "Zardozi hunting scene on velvet",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/FILE0338.JPG"
+  },
+  {
+    "slug": "arch-zardozi-06",
+    "group": "archive",
+    "caption": "Zardozi coat",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/FILE0343.JPG"
+  },
+  {
+    "slug": "arch-zardozi-07",
+    "group": "archive",
+    "caption": "Gold zardozi on black",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20140116_143248.jpg"
+  },
+  {
+    "slug": "arch-zardozi-08",
+    "group": "archive",
+    "caption": "Zardozi bodice",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20140116_143412.jpg"
+  },
+  {
+    "slug": "arch-zardozi-09",
+    "group": "archive",
+    "caption": "Embroidered square with red border",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20140114_112427.jpg"
+  },
+  {
+    "slug": "arch-jewel-01",
+    "group": "archive",
+    "caption": "Silver necklace",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20140114_130136.jpg"
+  },
+  {
+    "slug": "arch-jewel-02",
+    "group": "archive",
+    "caption": "Silver necklace",
+    "width": 1349,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/20140114_130335.jpg"
+  },
+  {
+    "slug": "arch-toran-01",
+    "group": "archive",
+    "caption": "Embroidered toran",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20140125_120432.jpg"
+  },
+  {
+    "slug": "arch-toran-02",
+    "group": "archive",
+    "caption": "Toran, detail",
+    "width": 2400,
+    "height": 1351,
+    "source": "Collection Old Textiles_Jewellery/20140125_120525.jpg"
+  },
+  {
+    "slug": "arch-kantha-15",
+    "group": "archive",
+    "caption": "Figurative kantha with horse and rider",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_4696.JPG"
+  },
+  {
+    "slug": "arch-kantha-16",
+    "group": "archive",
+    "caption": "Kantha with figures",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_4698.JPG"
+  },
+  {
+    "slug": "arch-phulkari-09",
+    "group": "archive",
+    "caption": "Phulkari bagh",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/IMG_4712.JPG"
+  },
+  {
+    "slug": "arch-frieze-05",
+    "group": "archive",
+    "caption": "Embroidered hanging with animals",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/IMG_4734.JPG"
+  },
+  {
+    "slug": "arch-frieze-06",
+    "group": "archive",
+    "caption": "Embroidered hanging",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/IMG_4740.JPG"
+  },
+  {
+    "slug": "arch-frieze-07",
+    "group": "archive",
+    "caption": "Embroidered hanging with lattice",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/IMG_4746.JPG"
+  },
+  {
+    "slug": "arch-mirror-03",
+    "group": "archive",
+    "caption": "Mirror-work embroidery",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2009_03_02/107_3575.JPG"
+  },
+  {
+    "slug": "arch-mirror-04",
+    "group": "archive",
+    "caption": "Mirror-work with peacocks",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2009_03_02/107_3577.JPG"
+  },
+  {
+    "slug": "arch-mirror-05",
+    "group": "archive",
+    "caption": "Mirror-work square",
+    "width": 1800,
+    "height": 2400,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2009_03_02/107_3579.JPG"
+  },
+  {
+    "slug": "arch-beadwork-01",
+    "group": "archive",
+    "caption": "Glass beadwork, Saurashtra",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/glass bead work/107_2917.JPG"
+  },
+  {
+    "slug": "arch-beadwork-02",
+    "group": "archive",
+    "caption": "Glass beadwork, detail",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/glass bead work/107_2919.JPG"
+  },
+  {
+    "slug": "arch-embroidered-square-01",
+    "group": "archive",
+    "caption": "Embroidered square with gold border",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_05_16/107_3211.JPG"
+  },
+  {
+    "slug": "arch-embroidered-square-02",
+    "group": "archive",
+    "caption": "Embroidered square",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_05_16/107_3212.JPG"
+  },
+  {
+    "slug": "arch-embroidered-square-03",
+    "group": "archive",
+    "caption": "Embroidered square",
+    "width": 2400,
+    "height": 1800,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/2008_05_16/107_3214.JPG"
+  },
+  {
+    "slug": "arch-ikat-02",
+    "group": "archive",
+    "caption": "Ikat",
+    "width": 2400,
+    "height": 1700,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/Ikat 1.jpg"
+  },
+  {
+    "slug": "arch-kantha-17",
+    "group": "archive",
+    "caption": "Figurative kantha",
+    "width": 1600,
+    "height": 904,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/KANTHA 1.jpg"
+  },
+  {
+    "slug": "arch-kantha-18",
+    "group": "archive",
+    "caption": "Kantha elephant",
+    "width": 2400,
+    "height": 1601,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/Kantha.jpg"
+  },
+  {
+    "slug": "arch-palkhi",
+    "group": "archive",
+    "caption": "Embroidered palanquin",
+    "width": 2400,
+    "height": 1572,
+    "source": "Collection Old Textiles_Jewellery/TEXTILE/palkhi0005.jpg"
+  },
+  {
+    "slug": "kutch-embroidery-01",
+    "group": "people",
+    "caption": "Embroiderers in a Kutch village",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00453.JPG"
+  },
+  {
+    "slug": "kutch-embroidery-02",
+    "group": "people",
+    "caption": "Embroidering by hand, Kutch",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00456.JPG"
+  },
+  {
+    "slug": "kutch-embroidery-03",
+    "group": "people",
+    "caption": "Embroiderers at work",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00459.JPG"
+  },
+  {
+    "slug": "kutch-elder",
+    "group": "people",
+    "caption": "A village elder, Kutch",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00460.JPG"
+  },
+  {
+    "slug": "kutch-women",
+    "group": "people",
+    "caption": "Women of a Kutch village",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00463.JPG"
+  },
+  {
+    "slug": "kutch-quilt",
+    "group": "people",
+    "caption": "A finished quilt outside a bhunga",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00465.JPG"
+  },
+  {
+    "slug": "kutch-bhunga-01",
+    "group": "people",
+    "caption": "A bhunga home in Kutch",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/DSC00444.JPG"
+  },
+  {
+    "slug": "kutch-bhunga-02",
+    "group": "people",
+    "caption": "Village home, Kutch",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00449.JPG"
+  },
+  {
+    "slug": "blockprint-23",
+    "group": "process",
+    "caption": "Printing at the long table",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00300.JPG"
+  },
+  {
+    "slug": "blockprint-24",
+    "group": "process",
+    "caption": "A young printer at work",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00306.JPG"
+  },
+  {
+    "slug": "blockprint-25",
+    "group": "process",
+    "caption": "Printing ajrakh",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00310.JPG"
+  },
+  {
+    "slug": "dyeing-13",
+    "group": "process",
+    "caption": "Lifting madder-dyed cloth from the vat",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00341.JPG"
+  },
+  {
+    "slug": "washing-09",
+    "group": "process",
+    "caption": "Washing red cloth",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00348.JPG"
+  },
+  {
+    "slug": "washing-10",
+    "group": "process",
+    "caption": "Rinsing in running water",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00350.JPG"
+  },
+  {
+    "slug": "pattern-drawing",
+    "group": "process",
+    "caption": "Drawing a pattern with compass",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/DSC00223.JPG"
+  },
+  {
+    "slug": "block-carving",
+    "group": "process",
+    "caption": "Carving a printing block",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/IMG_4831.JPG"
+  },
+  {
+    "slug": "dye-pots-01",
+    "group": "process",
+    "caption": "Pigment pots",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/20140302_112320.jpg"
+  },
+  {
+    "slug": "dye-pots-02",
+    "group": "process",
+    "caption": "Dye pots in colour",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/20140302_112331.jpg"
+  },
+  {
+    "slug": "blockprint-26",
+    "group": "process",
+    "caption": "A block on the printed cloth",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/20140302_124702.jpg"
+  },
+  {
+    "slug": "blockprint-27",
+    "group": "process",
+    "caption": "Red floral block print",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/20140302_120415.jpg"
+  },
+  {
+    "slug": "cutwork-table",
+    "group": "process",
+    "caption": "Checking a cutwork bedcover",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/20131001_190234.jpg"
+  },
+  {
+    "slug": "stitching-black",
+    "group": "process",
+    "caption": "Hand-stitching",
+    "width": 1349,
+    "height": 2400,
+    "source": "Workshop_Sample Development/20140123_131259.jpg"
+  },
+  {
+    "slug": "prod-quilt-2026-indigo",
+    "group": "product",
+    "caption": "New for 2026: hand-quilted indigo paisley bedcover with striped reverse",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/New Dsgn26/Bale 2 Indigo Outlin.jpeg"
+  },
+  {
+    "slug": "prod-quilt-2026-terracotta",
+    "group": "product",
+    "caption": "New for 2026: terracotta block-print quilt, hand-stitched",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/New Dsgn26/Bale 2 Orng.jpeg"
+  },
+  {
+    "slug": "prod-quilt-2026-trio",
+    "group": "product",
+    "caption": "New for 2026: mustard, stone and taupe block-print quilts",
+    "width": 1800,
+    "height": 2400,
+    "source": "HCI/LINTAS/New Dsgn26/Bale1 3 colors.jpeg"
+  },
+  {
+    "slug": "prod-quilt-2026-teal",
+    "group": "product",
+    "caption": "New for 2026: teal, mustard and stone quilts, rolled",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/New Dsgn26/Bale1 3colors.jpeg"
+  },
+  {
+    "slug": "prod-quilt-2026-four",
+    "group": "product",
+    "caption": "New for 2026: four colourways of the floral quilt",
+    "width": 1800,
+    "height": 2400,
+    "source": "HCI/LINTAS/New Dsgn26/Bale1 4 colors.jpeg"
+  },
+  {
+    "slug": "prod-quilt-2026-stone",
+    "group": "product",
+    "caption": "New for 2026: stone-on-white paisley quilt",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/New Dsgn26/Bale2 Stone.jpeg"
+  },
+  {
+    "slug": "blockprint-2026-line",
+    "group": "process",
+    "caption": "Printing a fine stripe, 2026",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/New Dsgn26/Block Print Line.jpeg"
+  },
+  {
+    "slug": "blockprint-2026-dia",
+    "group": "process",
+    "caption": "Registering a block on a striped ground",
+    "width": 2400,
+    "height": 1800,
+    "source": "HCI/LINTAS/New Dsgn26/Block Printing Dia.jpeg"
+  },
+  {
+    "slug": "washing-2026",
+    "group": "process",
+    "caption": "Washing printed cloth in the tank",
+    "width": 2400,
+    "height": 1800,
+    "source": "Workshop_Sample Development/Artisan working/Washing Fabric.jpeg"
+  },
+  {
+    "slug": "artisan-stitching",
+    "group": "process",
+    "caption": "Hand-stitching on a striped ground",
+    "width": 2400,
+    "height": 1351,
+    "source": "Workshop_Sample Development/Artisan working/20140123_131241.jpg"
+  },
+  {
+    "slug": "artisan-loom-01",
+    "group": "process",
+    "caption": "At the loom",
+    "width": 1349,
+    "height": 2400,
+    "source": "Workshop_Sample Development/Artisan working/20140222_203827.jpg"
+  },
+  {
+    "slug": "artisan-loom-02",
+    "group": "process",
+    "caption": "Weaving by hand",
+    "width": 1349,
+    "height": 2400,
+    "source": "Workshop_Sample Development/Artisan working/20140222_203836.jpg"
+  },
+  {
+    "slug": "artisan-dye-01",
+    "group": "process",
+    "caption": "Mixing pigment by hand",
+    "width": 1349,
+    "height": 2400,
+    "source": "Workshop_Sample Development/Artisan working/20140302_111901.jpg"
+  },
+  {
+    "slug": "artisan-dye-02",
+    "group": "process",
+    "caption": "Pigment pots on the dyer's bench",
+    "width": 1349,
+    "height": 2400,
+    "source": "Workshop_Sample Development/Artisan working/20140302_111911.jpg"
   }
 ]

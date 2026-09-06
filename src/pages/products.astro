@@ -1,0 +1,129 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import Lightbox from '../components/Lightbox.astro';
+import { getImage } from 'astro:assets';
+import { productCategories, collections, site } from '../data/site';
+import { photo, byPrefix, caption } from '../lib/photos';
+
+const groups = productCategories.map((c) => ({ ...c, items: byPrefix(c.prefix) }));
+const all = groups.flatMap((g) => g.items.map((it) => ({ ...it, cat: g.key })));
+// de-duplicate in case a slug matches two categories
+const seen = new Set<string>();
+const items = all.filter((it) => (seen.has(it.slug) ? false : (seen.add(it.slug), true)));
+const fulls = new Map(await Promise.all(items.map(async (it) => [it.slug, (await getImage({ src: photo(it.slug), width: 1800, format: 'webp' })).src] as const)));
+---
+<Base title="Products" description={`What Honeycomb International makes: hand-quilted bedcovers, cushions, cutwork appliqué, block-printed table covers, silk scarves and stoles, embroidered bags and wall hangings. Made to order in Ahmedabad for ${site.clients.join(', ')} and design-led homes worldwide.`}>
+  <section class="phero" data-hero>
+    <div class="wrap phero__inner">
+      <p class="eyebrow" data-reveal="fade">Products &nbsp;·&nbsp; {items.length} pieces from the archive</p>
+      <h1 class="lines phero__title">
+        <span class="line"><span>Made to order,</span></span>
+        <span class="line"><span>made by <em>hand.</em></span></span>
+      </h1>
+      <p class="lede" data-reveal>Everything below was designed and made by Honeycomb, for clients from Paris to San Francisco. Every piece can be reproduced, recoloured or redesigned to your brief. Minimums are modest, sampling is fast, and every piece is finished by hand.</p>
+    </div>
+  </section>
+
+  <section class="section section--forest colls">
+    <div class="wrap">
+      <div class="colls__head">
+        <p class="eyebrow eyebrow--dark" data-reveal>Inspirations from nature</p>
+        <h2 data-reveal>Four <em>collections.</em></h2>
+        <p class="body" data-reveal>Our 2012 brochure organised the range around four things found in nature: a peacock, a full moon, a snowflake and freshly hewn wood. The words below are our own, from that brochure.</p>
+      </div>
+      <div class="colls__grid">
+        {collections.map((c, i) => (
+          <article class="coll" data-reveal style={`transition-delay:${i * 0.08}s`}>
+            <a href={fulls.get(c.photo) ?? '#'} class="coll__img" data-lightbox-item data-full={fulls.get(c.photo)} data-caption={caption(c.photo)} data-cursor-text="View">
+              <Photo slug={c.photo} ratio="4x5" size="card" sizes="(max-width: 700px) 100vw, 25vw" />
+            </a>
+            <p class="eyebrow eyebrow--dark coll__muse">{c.muse}</p>
+            <h3 class="coll__title">{c.title}</h3>
+            <p class="coll__text">{c.text}</p>
+            <p class="coll__what small">{c.what}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pgrid-wrap">
+    <div class="wrap">
+      <div class="afilters" data-filters data-reveal>
+        <button class="afilter is-active" data-filter="all" data-hover>All</button>
+        {groups.map((g) => <button class="afilter" data-filter={g.key} data-hover>{g.name} <sup>{g.items.length}</sup></button>)}
+      </div>
+      <div class="agrid" data-archive-grid>
+        {items.map((it, i) => (
+          <a
+            href={fulls.get(it.slug)}
+            class="aitem"
+            data-cat={it.cat}
+            data-lightbox-item
+            data-full={fulls.get(it.slug)}
+            data-caption={it.caption}
+            data-cursor-text="View"
+            data-reveal
+            style={`transition-delay:${(i % 4) * 0.06}s`}
+          >
+            <Photo slug={it.slug} ratio={it.height > it.width ? '4x5' : '3x2'} size="thumb" sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 25vw" />
+            <span class="aitem__cap">{it.caption}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap pnote">
+      <hr class="stitch" />
+      <div class="pnote__grid">
+        <p class="eyebrow">How ordering works</p>
+        <div class="body">
+          <p>Send us a reference, a sketch or a sentence. We reply with ideas and a sampling plan within two working days. Samples are made in the workshop in two to four weeks, then production follows in the quantities a considered brand actually needs. We handle quality control, packing and shipment from Ahmedabad.</p>
+          <p><a href="/contact" class="btn btn--madder" data-hover>Start an enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+      <hr class="stitch" />
+    </div>
+  </section>
+
+  <Lightbox />
+</Base>
+
+<style>
+  .phero { padding: 11rem 0 clamp(3rem, 7vw, 6rem); }
+  .phero__inner { display: flex; flex-direction: column; gap: 1.6rem; }
+  .phero__title { font-size: var(--t-2xl); }
+
+  .colls__head { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem var(--gutter); align-items: end; margin-bottom: clamp(3rem, 6vw, 5rem); }
+  .colls__head .eyebrow { grid-column: 1 / -1; }
+  .colls__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gutter); }
+  .coll { display: flex; flex-direction: column; gap: 0.8rem; }
+  .coll__img { display: block; margin-bottom: 0.6rem; }
+  .coll__img :global(img) { transition: transform 1.2s var(--ease-out); }
+  .coll__img:hover :global(img) { transform: scale(1.04); }
+  .coll__title { font-size: clamp(1.4rem, 2vw, 1.9rem); font-family: var(--font-display); font-weight: 300; font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1; }
+  .coll__text { color: rgba(243, 237, 226, 0.75); font-size: var(--t-sm); line-height: 1.6; }
+  .coll__what { color: var(--turmeric); }
+  @media (max-width: 1000px) { .colls__grid { grid-template-columns: 1fr 1fr; } .colls__head { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .colls__grid { grid-template-columns: 1fr; } }
+
+  .pgrid-wrap { padding-top: 3rem; }
+  .afilters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: clamp(2rem, 5vw, 4rem); position: sticky; top: 4.6rem; z-index: 5; padding: 0.8rem 0; background: color-mix(in srgb, var(--cotton) 88%, transparent); backdrop-filter: blur(10px); }
+  .afilter { font-size: var(--t-sm); letter-spacing: 0.04em; padding: 0.55em 1em; border: 1px solid var(--line); border-radius: 999px; transition: background 0.4s, color 0.4s, border-color 0.4s; }
+  .afilter sup { font-size: 0.65em; opacity: 0.6; margin-left: 0.2em; }
+  .afilter:hover { border-color: var(--ink); }
+  .afilter.is-active { background: var(--forest); color: var(--cotton); border-color: var(--forest); }
+  .agrid { columns: 4; column-gap: var(--gutter); }
+  .aitem { display: block; break-inside: avoid; margin-bottom: var(--gutter); color: inherit; }
+  .aitem[hidden] { display: none; }
+  .aitem :global(img) { transition: transform 1.2s var(--ease-out); }
+  .aitem:hover :global(img) { transform: scale(1.04); }
+  .aitem__cap { display: block; margin-top: 0.6rem; font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .pnote__grid { display: grid; grid-template-columns: 1fr 3fr; gap: var(--gutter); padding-block: 2.5rem; }
+  .pnote__grid .body p + p { margin-top: 1.6rem; }
+  @media (max-width: 1100px) { .agrid { columns: 3; } }
+  @media (max-width: 700px) { .agrid { columns: 2; } .pnote__grid { grid-template-columns: 1fr; } .afilters { position: static; } }
+</style>

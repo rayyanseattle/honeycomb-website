@@ -2,12 +2,12 @@
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import { getImage } from 'astro:assets';
-import { site, crafts, processSteps, products } from '../data/site';
+import { site, crafts, processSteps, products, collections, newDesigns } from '../data/site';
 import { photo, byPrefix, caption } from '../lib/photos';
 
 const heroClips = ['/video/hero-hands.mp4', '/video/hero-quilters.mp4', '/video/hero-cutting.mp4'];
-const archiveTeaser = ['arch-kantha-13', 'arch-patola-08', 'arch-applique-01', 'arch-kashmir-06', 'arch-mochi-01', 'arch-brocade-02'];
-const people = ['blockprint-07', 'village-quilting-07', 'blockprint-03', 'dyeing-05', 'quilting-03', 'washing-04', 'blockprint-16', 'village-quilting-01'];
+const archiveTeaser = ['arch-kantha-13', 'arch-patola-08', 'arch-applique-01', 'arch-phulkari-05', 'arch-kalamkari-15', 'arch-zardozi-05'];
+const people = ['blockprint-07', 'kutch-embroidery-02', 'blockprint-03', 'dyeing-05', 'kutch-elder', 'washing-04', 'kutch-quilt', 'village-quilting-01'];
 
 // product hover previews
 const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: await getImage({ src: photo(p.photo), width: 720, format: 'webp' }) })));
@@ -27,14 +27,14 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
       <div class="hero__shade"></div>
     </div>
     <div class="hero__copy wrap" data-hero-copy>
-      <p class="eyebrow eyebrow--dark hero__eyebrow" data-reveal="fade">{site.city}, India &nbsp;·&nbsp; Since the 1990s</p>
+      <p class="eyebrow eyebrow--dark hero__eyebrow" data-reveal="fade">{site.city}, India &nbsp;·&nbsp; Since 1969</p>
       <h1 class="lines hero__title">
         <span class="line"><span>Cloth made</span></span>
         <span class="line"><span>by <em>many</em> hands.</span></span>
       </h1>
       <div class="hero__row">
         <p class="hero__lede" data-reveal>
-          Hand block print, embroidery, patchwork, weaving and tie‑dye, made with artisan families across Gujarat and Rajasthan for the world’s most considered homes.
+          Hand block print, embroidery, appliqué, weaving and tie‑dye, made with artisan families across Gujarat and Rajasthan since 1969, for Caravane, Zara Home and the world’s most considered homes.
         </p>
         <div class="hero__cta" data-reveal>
           <a href="#crafts" class="btn btn--cotton" data-hover>The crafts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
@@ -51,11 +51,11 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
       <div class="manifesto__grid">
         <p class="eyebrow" data-reveal><span class="num">§</span>Honeycomb International</p>
         <p class="manifesto__text display" data-words>
-          A honeycomb is built by thousands of small, patient makers, each adding a cell to something larger than themselves. That is how our cloth is made: printed, dyed, stitched and quilted by hand, by families whose craft is older than any brand. After a decade away, we are back at the table.
+          A honeycomb is built by thousands of small, patient makers, each adding a cell to something larger than themselves. That is how our cloth has been made since 1969: printed, dyed, stitched and quilted by hand, by families whose craft is older than any brand. After a decade away, we are back at the table.
         </p>
         <div class="manifesto__imgs">
           <Photo slug="quilting-01" ratio="4x5" size="card" parallax class="manifesto__img manifesto__img--a" />
-          <Photo slug="blockprint-cloth-01" ratio="1x1" size="thumb" parallax class="manifesto__img manifesto__img--b" />
+          <Photo slug="logo-on-cloth" ratio="1x1" size="thumb" parallax class="manifesto__img manifesto__img--b" />
         </div>
       </div>
     </div>
@@ -139,22 +139,68 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
     </div>
   </section>
 
+  <!-- ===================== NEW FOR 2026 ===================== -->
+  <section class="section newd">
+    <div class="wrap">
+      <div class="newd__head">
+        <div>
+          <p class="eyebrow" data-reveal><span class="num">03</span>New for 2026</p>
+          <h2 data-reveal>Fresh from<br />the <em>quilting frame.</em></h2>
+        </div>
+        <p class="body" data-reveal>Our first new designs in a decade: block-printed paisleys and florals in indigo, terracotta, mustard, teal and stone, hand-quilted in a running stitch with a striped reverse. Six colourways, sampling now.</p>
+      </div>
+      <div class="newd__grid" data-stagger>
+        {newDesigns.map((slug, i) => (
+          <a href="/products#new" class="newd__item" data-cursor-text="New" style={`--i:${i}`}>
+            <Photo slug={slug} ratio={i % 3 === 1 ? '4x5' : '3x2'} size="card" sizes="(max-width: 700px) 100vw, 33vw" parallax />
+          </a>
+        ))}
+      </div>
+      <div class="newd__cta" data-reveal>
+        <a href="/products#new" class="btn btn--ink" data-hover>See the new designs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COLLECTIONS ===================== -->
+  <section class="section section--forest colls">
+    <div class="wrap">
+      <div class="colls__head">
+        <div>
+          <p class="eyebrow eyebrow--dark" data-reveal><span class="num">04</span>Inspirations from nature</p>
+          <h2 data-reveal>A peacock, a moon,<br />a snowflake, <em>a log.</em></h2>
+        </div>
+        <p class="body" data-reveal>Our brochure organised the range around four things found in nature. Each became a collection, and each is still made today.</p>
+      </div>
+      <div class="colls__row" data-stagger>
+        {collections.map((c) => (
+          <a href="/products" class="coll" data-cursor-text="Products">
+            <Photo slug={c.photo} ratio="4x5" size="card" sizes="(max-width: 700px) 100vw, 25vw" parallax />
+            <p class="eyebrow eyebrow--dark coll__muse">{c.muse}</p>
+            <h3 class="coll__title">{c.title}</h3>
+            <p class="coll__what small">{c.what}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== PRODUCTS ===================== -->
   <section class="section products" data-products>
     <div class="wrap">
       <div class="products__head">
-        <p class="eyebrow" data-reveal><span class="num">03</span>What we make</p>
+        <p class="eyebrow" data-reveal><span class="num">05</span>What we make</p>
         <h2 data-reveal>For the bed, the table,<br />the window and <em>the wall.</em></h2>
       </div>
       <ul class="products__list" data-stagger>
         {products.map((p) => (
           <li class="product" data-product={p.photo} data-hover>
-            <span class="product__name">{p.name}</span>
+            <a href={`/products#${p.key}`} class="product__name">{p.name}</a>
             <span class="product__arrow" aria-hidden="true">→</span>
           </li>
         ))}
       </ul>
-      <p class="body products__note" data-reveal>Everything is made to order, to your design or ours, in the quantities a small brand actually needs. Minimums are modest, sampling is fast, and every piece is finished by hand.</p>
+      <div class="products__foot" data-reveal><p class="body products__note">Everything is made to order, to your design or ours, in the quantities a considered brand actually needs. Minimums are modest, sampling is fast, and every piece is finished by hand.</p><a href="/products" class="btn btn--ink" data-hover>See the products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a></div>
     </div>
     <div class="products__preview" data-products-preview aria-hidden="true">
       {productImgs.map((p) => (
@@ -164,14 +210,14 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   </section>
 
   <!-- ===================== ARCHIVE TEASER ===================== -->
-  <section class="section archive-teaser section--indigo">
+  <section class="section archive-teaser section--dark">
     <div class="wrap">
       <div class="archive-teaser__head">
         <div>
-          <p class="eyebrow eyebrow--dark" data-reveal><span class="num">04</span>The archive</p>
+          <p class="eyebrow eyebrow--dark" data-reveal><span class="num">06</span>The archive</p>
           <h2 data-reveal>A private collection<br />of <em>Indian cloth.</em></h2>
         </div>
-        <p class="body" data-reveal>Thirty years of collecting kantha, patola, appliqué, Kashmir shawls and bandhani. The archive is where our new work begins, and it is open to clients who want to design from the source.</p>
+        <p class="body" data-reveal>Fifty years of collecting kantha, patola, appliqué, phulkari, kalamkari, Kashmir shawls and bandhani. The archive is where our new work begins, and it is open to clients who want to design from the source.</p>
       </div>
       <div class="archive-teaser__grid" data-stagger>
         {archiveTeaser.map((slug, i) => (
@@ -191,9 +237,9 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   <section class="section people">
     <div class="wrap">
       <div class="people__head">
-        <p class="eyebrow" data-reveal><span class="num">05</span>The hands</p>
+        <p class="eyebrow" data-reveal><span class="num">07</span>The hands</p>
         <h2 data-reveal>Printers, dyers, quilters,<br />cutters and <em>stitchers.</em></h2>
-        <p class="body" data-reveal>We do not own factories. We work with families and workshops who have practised their craft for generations, paying fairly by the piece and returning season after season. Their names do not appear on the label. Their hands appear everywhere else.</p>
+        <p class="body" data-reveal>We do not own factories. Since 1969 we have worked with families and workshops across Kutch, Saurashtra and Rajasthan who have practised their craft for generations, paying fairly by the piece and returning season after season. Their names do not appear on the label. Their hands appear everywhere else.</p>
       </div>
       <div class="people__grid" data-stagger>
         {people.map((slug, i) => (
@@ -205,13 +251,30 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
     </div>
   </section>
 
+  <!-- ===================== SHOWROOM ===================== -->
+  <section class="section section--tight showroom">
+    <div class="showroom__img">
+      <Photo slug="showroom-hero" ratio="21x9" size="hero" parallax sizes="100vw" />
+    </div>
+    <div class="wrap showroom__grid">
+      <div>
+        <p class="eyebrow" data-reveal><span class="num">08</span>The showroom</p>
+        <h2 data-reveal>Cama Hotel,<br /><em>Khanpur.</em></h2>
+      </div>
+      <div class="body" data-reveal>
+        <p>For decades our showroom in Ahmedabad has been where buyers from Paris, Madrid and San Francisco sat down with tea, a wall of folded quilts and a table of samples, and designed the next season. It is open again, by appointment. Come and see the cloth in person.</p>
+        <p><a href="/contact" class="link" data-hover>Book a visit</a></p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== TRUST ===================== -->
   <section class="section section--tight trust">
     <div class="wrap">
       <hr class="stitch" />
       <div class="trust__grid">
         <p class="eyebrow" data-reveal>In good company</p>
-        <p class="trust__text display" data-reveal>Our cloth has been sold by <em>Caravane</em> in Paris and by independent homeware houses across Europe and North America. We are now taking on a small number of new partners for 2026.</p>
+        <p class="trust__text display" data-reveal>Over the years we have developed and supplied collections for <em>Caravane</em> in Paris, <em>Zara Home</em> and <em>Cost Plus World Market</em>, among others. We are now taking on a small number of new partners for 2026.</p>
       </div>
       <hr class="stitch" />
     </div>
@@ -220,7 +283,7 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   <!-- ===================== CTA ===================== -->
   <section class="section cta">
     <div class="wrap cta__inner">
-      <p class="eyebrow" data-reveal><span class="num">06</span>Enquiries</p>
+      <p class="eyebrow" data-reveal><span class="num">09</span>Enquiries</p>
       <h2 class="cta__title" data-reveal>Let’s make<br />something <em>together.</em></h2>
       <p class="lede" data-reveal>Send us a sketch, a swatch or a sentence. We will reply within two working days from Ahmedabad.</p>
       <div class="cta__row" data-reveal>
@@ -241,7 +304,7 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   .hero__media video { width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.6s ease; }
   .hero__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28, 25, 22, 0.35) 0%, rgba(28, 25, 22, 0.05) 35%, rgba(28, 25, 22, 0.72) 100%); }
   .hero__copy { position: relative; z-index: 1; padding-bottom: clamp(3rem, 8vh, 6rem); padding-top: 9rem; }
-  .hero__eyebrow { margin-bottom: 1.6rem; }
+  .hero__eyebrow { margin-bottom: 1.6rem; color: rgba(243, 237, 226, 0.85); text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55); }
   .hero__title { font-size: clamp(3.2rem, 1.2rem + 9.2vw, 10.5rem); line-height: 0.96; letter-spacing: -0.02em; }
   .hero__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem 4rem; align-items: end; margin-top: 2.4rem; }
   .hero__lede { max-width: 46ch; font-size: var(--t-md); line-height: 1.4; color: rgba(243, 237, 226, 0.85); }
@@ -324,6 +387,39 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
     .step__img-m { display: block; }
   }
 
+  /* ---------- new for 2026 ---------- */
+  .newd__head { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
+  .newd__head h2 { margin-top: 1.4rem; }
+  .newd__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); align-items: start; }
+  .newd__item { display: block; }
+  .newd__item:nth-child(3n+2) { margin-top: 3rem; }
+  .newd__item :global(img) { transition: transform 1.2s var(--ease-out); }
+  .newd__item:hover :global(img) { transform: scale(1.04); }
+  .newd__cta { margin-top: clamp(2.5rem, 5vw, 4rem); }
+  @media (max-width: 900px) { .newd__head { grid-template-columns: 1fr; } .newd__grid { grid-template-columns: 1fr 1fr; } .newd__item:nth-child(3n+2) { margin-top: 0; } .newd__item:nth-child(even) { margin-top: 2.5rem; } }
+
+  /* ---------- collections ---------- */
+  .colls__head { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
+  .colls__head h2 { margin-top: 1.4rem; }
+  .colls__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gutter); align-items: start; }
+  .coll { display: flex; flex-direction: column; gap: 0.6rem; color: inherit; }
+  .coll :global(.ph) { margin-bottom: 0.6rem; }
+  .coll :global(img) { transition: transform 1.2s var(--ease-out); }
+  .coll:hover :global(img) { transform: scale(1.04); }
+  .coll:nth-child(even) { margin-top: 3rem; }
+  .coll__title { font-size: clamp(1.3rem, 1.8vw, 1.8rem); font-style: italic; font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1; }
+  .coll__what { color: var(--turmeric); }
+  @media (max-width: 1000px) { .colls__row { grid-template-columns: 1fr 1fr; } .colls__head { grid-template-columns: 1fr; } .coll:nth-child(even) { margin-top: 0; } }
+  @media (max-width: 560px) { .colls__row { grid-template-columns: 1fr; } }
+
+  /* ---------- showroom ---------- */
+  .showroom { padding-top: 0; }
+  .showroom__img { margin-bottom: clamp(3rem, 6vw, 5rem); }
+  .showroom__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: start; }
+  .showroom__grid h2 { margin-top: 1.4rem; }
+  .showroom__grid .body p + p { margin-top: 1.4rem; }
+  @media (max-width: 900px) { .showroom__grid { grid-template-columns: 1fr; } }
+
   /* ---------- products ---------- */
   .products { position: relative; overflow: hidden; }
   .products__head { display: flex; flex-direction: column; gap: 1.4rem; margin-bottom: clamp(2.5rem, 6vw, 5rem); }
@@ -332,7 +428,8 @@ const productImgs = await Promise.all(products.map(async (p) => ({ ...p, img: aw
   .product:hover { padding-left: 1.2rem; color: var(--madder); }
   .product__arrow { font-family: var(--font-body); font-size: 1.2rem; opacity: 0; transform: translateX(-8px); transition: opacity 0.4s, transform 0.5s var(--ease-out); }
   .product:hover .product__arrow { opacity: 1; transform: none; }
-  .products__note { margin-top: 2.5rem; }
+  .products__foot { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.6rem; align-items: flex-start; }
+  .product__name { color: inherit; }
   .products__preview { position: absolute; left: 0; top: 0; width: clamp(14rem, 22vw, 22rem); aspect-ratio: 4 / 5; pointer-events: none; z-index: 2; opacity: 0; transition: opacity 0.4s; overflow: hidden; }
   .products__preview.is-visible { opacity: 1; }
   .products__preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s; }
