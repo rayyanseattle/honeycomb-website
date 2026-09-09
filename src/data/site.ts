@@ -3,7 +3,7 @@ export const site = {
   shortName: 'Honeycomb',
   tagline: 'Cloth made by many hands.',
   description:
-    'Honeycomb International is an Ahmedabad-based design, product development, manufacturing and export house for handcrafted home textiles, established in 1969. Hand block print, hand embroidery, appliqué and patchwork, hand weaving, tie-dye, batik and hand painting, made with artisan families across Gujarat and Rajasthan for Caravane, Zara Home, Cost Plus World Market and design-led homes worldwide.',
+    'Honeycomb International is an Ahmedabad-based design, product development, manufacturing and export house for handcrafted home textiles, established in 1969. Hand block print, hand embroidery, appliqué and patchwork, hand weaving, tie-dye, batik and hand painting, made with artisan families across Gujarat and Rajasthan for design-led homes and interiors worldwide.',
   url: 'https://honeycombint.com',
   email: 'info@honeycombint.com',
   city: 'Ahmedabad',
@@ -20,7 +20,6 @@ export const site = {
     { label: 'Story', href: '/about' },
     { label: 'Enquire', href: '/contact' },
   ],
-  clients: ['Caravane, Paris', 'Zara Home', 'Cost Plus World Market'],
 };
 
 export const crafts = [
@@ -36,7 +35,7 @@ export const crafts = [
       'A wooden block, carved by hand, pressed by hand, one impression at a time. Every metre carries the faint drift of the human hand that made it. That drift is the point.',
     story: [
       'Hand block printing in Gujarat and Rajasthan is older than any of the tables it is done on. A pattern is drawn, then carved in reverse into seasoned teak. The printer dips the block into a tray of colour, sets it on the cloth by eye, and strikes it once with the heel of the hand. Then again, a fraction to the right, for as long as the cloth runs.',
-      'We print on hand-loomed and mill cotton, on linen and on silk, in traditional mineral and vegetable colours as well as fast modern pigments. Ajrakh-style resist prints in indigo and madder, fine Sanganeri florals, bold geometrics of our own design, and exact reproductions of a client’s artwork. Natural-dyed block print, as our first catalogue put it, actually looks more beautiful with every wash.',
+      'We print on hand-loomed and mill cotton, on linen and on silk, in traditional mineral and vegetable colours as well as fast modern pigments. Ajrakh-style resist prints in indigo and madder, fine Sanganeri florals, bold geometrics of our own design, and exact reproductions of a client’s artwork. Natural-dyed block print, as our catalogue has always put it, actually looks more beautiful with every wash.',
       'After printing, the cloth is washed in open tanks, dried in the sun, and often printed again for a second and third colour. Nothing about it is quick. Everything about it shows.',
     ],
     process: ['blockprint-2026-line', 'blockprint-09', 'block-carving', 'artisan-dye-02', 'washing-2026', 'blockprint-2026-dia', 'blockprint-cloth-01', 'blockprint-26'],
@@ -117,7 +116,7 @@ export const crafts = [
     ],
     process: ['dyeing-04', 'dyeing-05', 'dyeing-08', 'dyeing-13', 'dyeing-02', 'washing-08', 'washing-09', 'dyeing-12'],
     products: ['Silk scarves & stoles', 'Crinkle silk shawls', 'Bandhani dupattas', 'Silk quilts & bedcovers', 'Cushions', 'Plain-dyed yardage'],
-    gallery: ['prod-crinkle-blue', 'prod-bandhani-black', 'prod-quilt-zara-1', 'prod-scarf-crinkle-1'],
+    gallery: ['prod-crinkle-blue', 'prod-bandhani-black', 'prod-quilt-tiedye-stripe-1', 'prod-scarf-crinkle-1'],
   },
 ] as const;
 
@@ -159,7 +158,7 @@ export const collections = [
     text: 'Block-printed quilts, hand-quilted by traditional village women artisans, wrapping you in an affectionate embrace despite the howling winds outside. Layers of elegantly patterned cotton sandwiching cotton batting, all hand-stitched in the classiest manner possible.',
     what: 'Cotton and silk quilts in natural and other dyes. Single, queen and king.',
     photo: 'prod-kantha-quilt-1',
-    alt: 'prod-quilt-caravane',
+    alt: 'prod-quilt-rose-diamond',
   },
 ];
 

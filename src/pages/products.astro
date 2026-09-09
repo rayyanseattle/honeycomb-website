@@ -13,7 +13,7 @@ const seen = new Set<string>();
 const items = all.filter((it) => (seen.has(it.slug) ? false : (seen.add(it.slug), true)));
 const fulls = new Map(await Promise.all(items.map(async (it) => [it.slug, (await getImage({ src: photo(it.slug), width: 1800, format: 'webp' })).src] as const)));
 ---
-<Base title="Products" description={`What Honeycomb International makes: hand-quilted bedcovers, cushions, cutwork appliqué, block-printed table covers, silk scarves and stoles, embroidered bags and wall hangings. Made to order in Ahmedabad for ${site.clients.join(', ')} and design-led homes worldwide.`}>
+<Base title="Products" description={`What Honeycomb International makes: hand-quilted bedcovers, cushions, cutwork appliqué, block-printed table covers, silk scarves and stoles, embroidered bags and wall hangings. Made to order in Ahmedabad for design-led homes and interiors worldwide.`}>
   <section class="phero" data-hero>
     <div class="wrap phero__inner">
       <p class="eyebrow" data-reveal="fade">Products &nbsp;·&nbsp; {items.length} pieces from the archive</p>
